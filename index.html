@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convergence Health Planner</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Convergence</p>
+          <h1>A gentler way to organize complicated health information.</h1>
+          <p class="hero-text">
+            Keep several diagnoses in one place, see where symptoms overlap, and
+            collect food notes that can help guide a conversation with her
+            oncologist or dietitian.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-link" href="#condition-name">Start with a condition</a>
+            <button id="load-sample" class="ghost-button" type="button">
+              Load Example Data
+            </button>
+          </div>
+
+          <div class="hero-note">
+            <strong>Medical safety note:</strong> this organizer can summarize
+            patterns, but it does not decide the correct diet for cancer-related
+            care. Any diet changes should be reviewed with her care team.
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="mini-card">
+            <p class="card-kicker">How to use it</p>
+            <ol class="step-list">
+              <li>Add one condition at a time.</li>
+              <li>List symptoms separated by commas.</li>
+              <li>Note foods that help and foods to ask about.</li>
+              <li>Review overlaps and run AI analysis if needed.</li>
+            </ol>
+          </div>
+          <div class="mini-card accent-card">
+            <p class="card-kicker">Best use</p>
+            <p>
+              Bring the overlap summary and clinician questions to appointments
+              so decisions can be made with context instead of scattered notes.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="workspace">
+        <div class="panel input-panel">
+          <div class="panel-header stacked-mobile">
+            <div>
+              <p class="section-label">Step 1</p>
+              <h2>Add a condition</h2>
+              <p class="section-copy">
+                Use short symptom phrases like <em>fatigue</em>, <em>nausea</em>,
+                or <em>loss of appetite</em>.
+              </p>
+            </div>
+            <button id="clear-form" class="text-button" type="button">Clear form</button>
+          </div>
+
+          <form id="condition-form" class="condition-form">
+            <label>
+              Condition or diagnosis
+              <input
+                id="condition-name"
+                name="condition-name"
+                placeholder="Example: chemotherapy side effects"
+                required
+              />
+            </label>
+
+            <label>
+              Symptoms
+              <textarea
+                id="condition-symptoms"
+                name="condition-symptoms"
+                rows="4"
+                placeholder="Example: fatigue, nausea, loss of appetite"
+                required
+              ></textarea>
+            </label>
+
+            <label>
+              Foods, meals, or approaches that seem to help
+              <textarea
+                id="condition-diet-helpful"
+                name="condition-diet-helpful"
+                rows="3"
+                placeholder="Example: smoothies, hydration, soft foods, small frequent meals"
+              ></textarea>
+            </label>
+
+            <label>
+              Foods to avoid or ask the care team about
+              <textarea
+                id="condition-diet-avoid"
+                name="condition-diet-avoid"
+                rows="3"
+                placeholder="Example: spicy foods, alcohol, rough foods, supplements"
+              ></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button id="add-condition" class="primary-button" type="submit">
+                Add this condition
+              </button>
+              <p class="helper-copy">You can add as many conditions as needed.</p>
+            </div>
+          </form>
+
+          <section class="saved-section">
+            <div class="inline-heading stacked-mobile">
+              <div>
+                <p class="section-label">Step 2</p>
+                <h3>Review saved conditions</h3>
+              </div>
+              <div id="condition-count" class="summary-badge">0 saved</div>
+            </div>
+            <div id="condition-list" class="condition-list"></div>
+          </section>
+        </div>
+
+        <div class="panel results-panel">
+          <div class="results-topbar">
+            <div>
+              <p class="section-label">Step 3</p>
+              <h2>Review overlap and next questions</h2>
+              <p class="section-copy">
+                These cards help surface what repeats across conditions so her
+                care team can prioritize what matters most right now.
+              </p>
+            </div>
+            <button id="run-ai-analysis" class="secondary-button" type="button">
+              Run AI Analysis
+            </button>
+          </div>
+
+          <div class="overview-grid">
+            <article class="overview-tile">
+              <span class="overview-label">Conditions</span>
+              <strong id="conditions-total" class="overview-value">0</strong>
+            </article>
+            <article class="overview-tile">
+              <span class="overview-label">Shared symptoms</span>
+              <strong id="shared-symptom-total" class="overview-value">0</strong>
+            </article>
+            <article class="overview-tile">
+              <span class="overview-label">Shared food themes</span>
+              <strong id="shared-diet-total" class="overview-value">0</strong>
+            </article>
+          </div>
+
+          <div class="results-grid">
+            <section class="result-card">
+              <div class="card-heading">
+                <h3>Overlapping symptoms</h3>
+                <p>Symptoms that appear in more than one condition.</p>
+              </div>
+              <div id="symptom-overlap" class="result-content"></div>
+            </section>
+
+            <section class="result-card">
+              <div class="card-heading">
+                <h3>Shared food themes</h3>
+                <p>Repeated patterns from the notes you entered.</p>
+              </div>
+              <div id="diet-themes" class="result-content"></div>
+            </section>
+
+            <section class="result-card">
+              <div class="card-heading">
+                <h3>Questions for the care team</h3>
+                <p>Use these to prepare for a visit or call.</p>
+              </div>
+              <div id="doctor-questions" class="result-content"></div>
+            </section>
+
+            <section class="result-card ai-card">
+              <div class="card-heading with-action">
+                <div>
+                  <h3>AI summary</h3>
+                  <p>A cautious summary for discussion, not a diagnosis.</p>
+                </div>
+              </div>
+              <div id="ai-summary" class="result-content"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template id="condition-item-template">
+      <article class="condition-item">
+        <div class="condition-title-row">
+          <div>
+            <h4 class="condition-title"></h4>
+            <p class="condition-subtitle">Included in the shared review</p>
+          </div>
+          <button class="delete-button" type="button">Remove</button>
+        </div>
+
+        <div class="condition-chip-group" data-role="symptoms-group">
+          <p class="field-label">Symptoms</p>
+          <div class="chip-wrap" data-role="symptoms"></div>
+        </div>
+
+        <div class="condition-chip-group" data-role="helpful-group">
+          <p class="field-label">Helpful notes</p>
+          <div class="chip-wrap" data-role="helpful"></div>
+        </div>
+
+        <div class="condition-chip-group" data-role="avoid-group">
+          <p class="field-label">Cautions to review</p>
+          <div class="chip-wrap" data-role="avoid"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
