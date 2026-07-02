@@ -28,25 +28,10 @@ let currentNutritionAnalysis = null;
 
 applyProfileToForm();
 bindProfileControls();
-render();
+bindConditionForm();
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  saveCurrentCondition();
-});
-
-addConditionButton.addEventListener("click", () => {
-  if (addConditionButton.type !== "submit") {
-    saveCurrentCondition();
-  }
-});
-
-clearFormButton.addEventListener("click", () => {
-  form.reset();
-  nameInput.focus();
-});
-
-runAiAnalysisButton.addEventListener("click", async () => {
+if (runAiAnalysisButton) {
+  runAiAnalysisButton.addEventListener("click", async () => {
   if (conditions.length === 0) {
     currentAiAnalysis = null;
     renderAiEmptyState("Add at least one condition before running AI analysis.");
@@ -84,7 +69,51 @@ runAiAnalysisButton.addEventListener("click", async () => {
   } finally {
     setAiLoadingState(false);
   }
-});
+  });
+}
+
+render();
+
+function bindConditionForm() {
+  if (!form || !addConditionButton || !clearFormButton || !nameInput || !symptomsInput) {
+    return;
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    saveCurrentCondition();
+  });
+
+  addConditionButton.addEventListener("click", () => {
+    if (addConditionButton.type !== "submit") {
+      saveCurrentCondition();
+    }
+  });
+
+  clearFormButton.addEventListener("click", () => {
+    form.reset();
+    nameInput.focus();
+  });
+}
+
+function normalizeCondition(raw) {
+  if (!raw || typeof raw !== "object") {
+    return null;
+  }
+
+  const name = String(raw.name || "").trim();
+  if (!name) {
+    return null;
+  }
+
+  return {
+    id: typeof raw.id === "string" && raw.id ? raw.id : crypto.randomUUID(),
+    name,
+    symptoms: Array.isArray(raw.symptoms) ? raw.symptoms : [],
+    helpful: Array.isArray(raw.helpful) ? raw.helpful : [],
+    avoid: Array.isArray(raw.avoid) ? raw.avoid : []
+  };
+}
 
 function loadProfile() {
   const saved = localStorage.getItem(PROFILE_STORAGE_KEY);
@@ -177,7 +206,11 @@ function loadConditions() {
 
   try {
     const parsed = JSON.parse(saved);
-    return Array.isArray(parsed) ? parsed : [];
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+
+    return parsed.map(normalizeCondition).filter(Boolean);
   } catch {
     return [];
   }
@@ -197,7 +230,21 @@ function saveCurrentCondition() {
   };
 
   if (!nextCondition.name || nextCondition.symptoms.length === 0) {
-    nameInput.focus();
+    if (!nextCondition.name) {
+      nameInput.reportValidity();
+      nameInput.focus();
+    } else {
+      symptomsInput.setCustomValidity("Add at least one symptom.");
+      symptomsInput.reportValidity();
+      symptomsInput.focus();
+      symptomsInput.addEventListener(
+        "input",
+        () => {
+          symptomsInput.setCustomValidity("");
+        },
+        { once: true }
+      );
+    }
     return;
   }
 
@@ -502,7 +549,7 @@ function buildOverlapRows() {
   const symptomMap = new Map();
 
   conditions.forEach((condition) => {
-    [...new Set(condition.symptoms)].forEach((symptom) => {
+    [...new Set(condition.symptoms || [])].forEach((symptom) => {
       if (!symptomMap.has(symptom)) {
         symptomMap.set(symptom, []);
       }
@@ -520,7 +567,7 @@ function buildFrequencyMap(field) {
   const map = new Map();
 
   conditions.forEach((condition) => {
-    [...new Set(condition[field])].forEach((entry) => {
+    [...new Set(condition[field] || [])].forEach((entry) => {
       if (!map.has(entry)) {
         map.set(entry, []);
       }
@@ -573,7 +620,7 @@ function buildQuestions() {
     "Should calories, protein, hydration, or fiber be prioritized first at this stage of treatment?"
   ];
 
-  const hasAvoids = conditions.some((condition) => condition.avoid.length > 0);
+  const hasAvoids = conditions.some((condition) => (condition.avoid || []).length > 0);
   const hasOverlap = buildOverlapRows().length > 0;
   const hasHelpfulThemes = buildFrequencyMap("helpful").length > 0;
 
@@ -682,7 +729,9 @@ function buildAiSection(title, items) {
 function populateChipWrap(container, items, emptyMessage) {
   container.innerHTML = "";
 
-  if (items.length === 0) {
+  const safeItems = Array.isArray(items) ? items : [];
+
+  if (safeItems.length === 0) {
     const chip = document.createElement("span");
     chip.className = "chip muted";
     chip.textContent = emptyMessage;
@@ -690,7 +739,7 @@ function populateChipWrap(container, items, emptyMessage) {
     return;
   }
 
-  items.forEach((item) => {
+  safeItems.forEach((item) => {
     const chip = document.createElement("span");
     chip.className = "chip";
     chip.textContent = capitalize(item);

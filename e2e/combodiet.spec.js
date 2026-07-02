@@ -40,6 +40,10 @@ test.describe("ComboDiet", () => {
   test("adds a condition with symptoms to the saved list", async ({ page }) => {
     await page.goto("/");
 
+    await expect(page.locator("#condition-name")).toHaveAttribute(
+      "placeholder",
+      "Example: leukemia or liver cancer"
+    );
     await page.getByLabel("Condition or diagnosis").fill("Test Condition");
     await page.getByLabel(/Symptoms/i).fill("fatigue, nausea");
     await page.getByRole("button", { name: "Add this condition" }).click();
@@ -48,6 +52,30 @@ test.describe("ComboDiet", () => {
     await expect(page.locator(".condition-item .condition-title")).toHaveText("Test Condition");
     await expect(page.locator(".condition-item")).toContainText("Fatigue");
     await expect(page.locator(".condition-item")).toContainText("Nausea");
+  });
+
+  test("adds a condition when saved data is malformed", async ({ page }) => {
+    await page.addInitScript((storageKey) => {
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify([{ id: "legacy", name: "Legacy condition" }])
+      );
+    }, STORAGE_KEYS[0]);
+
+    const pageErrors = [];
+    page.on("pageerror", (error) => pageErrors.push(error.message));
+
+    await page.goto("/");
+
+    await expect(page.locator("#condition-count")).toHaveText("1 saved");
+    expect(pageErrors).toEqual([]);
+
+    await page.getByLabel("Condition or diagnosis").fill("Leukemia");
+    await page.getByLabel(/Symptoms/i).fill("fatigue");
+    await page.getByRole("button", { name: "Add this condition" }).click();
+
+    await expect(page.locator("#condition-count")).toHaveText("2 saved");
+    await expect(page.locator(".condition-item .condition-title").last()).toHaveText("Leukemia");
   });
 
   test("overview tiles update after adding a condition", async ({ page }) => {
