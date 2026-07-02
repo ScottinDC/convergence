@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+# Bot / crawler hardening (Netlify)
+# - Security headers and X-Robots-Tag: see ./_headers (served from publish root).
+# - robots.txt: see ./robots.txt (honor-system; well-behaved bots only).
+# - User-Agent blocking (.htaccess RewriteRule / Deny) is NOT available on Netlify.
+#   For UA-based blocking on Netlify, add an Edge Function or use Netlify Firewall
+#   (Pro/Business). Apache .htaccess rules apply only when served via Apache.

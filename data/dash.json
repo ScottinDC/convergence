@@ -1,0 +1,69 @@
+{
+  "id": "dash",
+  "name": "The Dash Diet",
+  "type": "category-list",
+  "categories": {
+    "Grains": [
+      "Brown rice",
+      "Quinoa",
+      "Whole grain cereal",
+      "Whole wheat bread",
+      "Whole wheat pasta"
+    ],
+    "Vegetables": [
+      "Broccoli",
+      "Carrots",
+      "Cucumbers",
+      "Green Beans",
+      "Kale",
+      "Spinach",
+      "Squash",
+      "Tomatoes"
+    ],
+    "Fruit": [
+      "Apples",
+      "Banana",
+      "GrapeFruit",
+      "Grapes",
+      "Oranges",
+      "Pineapples",
+      "Strawberries"
+    ],
+    "Fat-Free or Low-Fat Dairy": [
+      "Cheese",
+      "Cream",
+      "Milk",
+      "Yogurt"
+    ],
+    "Lean Protein": [
+      "Chicken",
+      "Eggs",
+      "Fish",
+      "Turkey"
+    ],
+    "Nuts, Seeds, and Legumes": [
+      "Almonds",
+      "Black Beans",
+      "Kidney Beans",
+      "Lentils",
+      "Peanuts",
+      "Pistachios",
+      "Split peas",
+      "Sunflower seeds",
+      "Walnuts"
+    ],
+    "Fats and Oils": [
+      "Canola oil",
+      "Low-fat mayonnaise",
+      "Olive oil",
+      "Safflower oil"
+    ],
+    "Sweets": [
+      "Jam",
+      "Jelly",
+      "Maple syrup",
+      "Sorbet"
+    ]
+  },
+  "foodCount": 45
+}

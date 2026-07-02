@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="robots"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+    />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <title>ComboDiet</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header-inner">
+        <div class="brand-lockup">
+          <span class="material-symbols-outlined brand-icon" aria-hidden="true">explore</span>
+          <span class="brand-name">ComboDiet</span>
+        </div>
+        <a class="header-link" href="data/download.html">Data exports</a>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <!-- Diet Explorer hero -->
+      <section class="explorer-hero">
+        <p class="eyebrow">ComboDiet</p>
+        <h1>Diet Explorer</h1>
+        <p class="hero-text">
+          Choose nutritional frameworks to compare, then layer in conditions and symptoms.
+          See where patterns overlap and collect questions for her oncologist or dietitian.
+        </p>
+        <div class="hero-note">
+          <span class="material-symbols-outlined hero-note-icon" aria-hidden="true">info</span>
+          <p>
+            <strong>Medical safety note:</strong> this organizer can summarize patterns, but it
+            does not decide the correct diet for cancer-related care. Any diet changes should be
+            reviewed with her care team.
+          </p>
+        </div>
+      </section>
+
+      <!-- Advanced Mode / Combine Rules -->
+      <section class="advanced-toggle" aria-label="Food combining overlay (coming soon)">
+        <div class="advanced-toggle-copy">
+          <div class="advanced-toggle-icon" aria-hidden="true">
+            <span class="material-symbols-outlined">layers</span>
+          </div>
+          <div>
+            <h3 class="advanced-toggle-title">Advanced Mode: Combine Rules</h3>
+            <p class="advanced-toggle-text">
+              Layer Food Combining principles over your selected diet for optimal digestion.
+              <span class="placeholder-badge">UI preview</span>
+            </p>
+          </div>
+        </div>
+        <label class="toggle-switch">
+          <input id="food-combining-toggle" type="checkbox" disabled />
+          <span class="toggle-track" aria-hidden="true"></span>
+        </label>
+      </section>
+
+      <!-- Blood type + framework selection -->
+      <section class="profile-section">
+        <fieldset class="profile-fieldset blood-type-fieldset">
+          <legend class="field-label">Blood type (for Blood Type framework)</legend>
+          <div class="option-row" id="blood-type-options">
+            <label class="option-chip">
+              <input type="radio" name="blood-type" value="" checked />
+              <span>Not set</span>
+            </label>
+            <label class="option-chip">
+              <input type="radio" name="blood-type" value="A" />
+              <span>Type A</span>
+            </label>
+            <label class="option-chip">
+              <input type="radio" name="blood-type" value="B" />
+              <span>Type B</span>
+            </label>
+            <label class="option-chip">
+              <input type="radio" name="blood-type" value="AB" />
+              <span>Type AB</span>
+            </label>
+            <label class="option-chip">
+              <input type="radio" name="blood-type" value="O" />
+              <span>Type O</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="profile-fieldset">
+          <legend class="field-label">Frameworks to include</legend>
+          <p class="section-copy profile-hint">
+            Select frameworks for discussion with her care team. Blood Type classifications are
+            reference material, not verified medical guidance.
+          </p>
+
+          <div id="framework-options" class="framework-select-grid">
+            <label class="framework-option">
+              <input type="checkbox" name="framework" value="dash" checked />
+              <span class="framework-option-check" aria-hidden="true">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span class="framework-option-body">
+                <span class="framework-name">DASH</span>
+                <span class="framework-desc">
+                  Rich in potassium, calcium, and magnesium to support blood pressure.
+                </span>
+              </span>
+            </label>
+
+            <label class="framework-option">
+              <input type="checkbox" name="framework" value="mediterranean" checked />
+              <span class="framework-option-check" aria-hidden="true">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span class="framework-option-body">
+                <span class="framework-name">Mediterranean</span>
+                <span class="framework-desc">
+                  Plant-based foods, healthy fats, and balanced meals.
+                </span>
+              </span>
+            </label>
+
+            <label class="framework-option">
+              <input type="checkbox" name="framework" value="healthyVegetarian" />
+              <span class="framework-option-check" aria-hidden="true">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span class="framework-option-body">
+                <span class="framework-name">Healthy Vegetarian</span>
+                <span class="framework-desc">
+                  Whole, minimally processed plant foods with balanced nutrition.
+                </span>
+              </span>
+            </label>
+
+            <label class="framework-option">
+              <input type="checkbox" name="framework" value="pescetarian" />
+              <span class="framework-option-check" aria-hidden="true">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span class="framework-option-body">
+                <span class="framework-name">Pescetarian</span>
+                <span class="framework-desc">
+                  Plant-forward eating with fish and seafood as primary protein.
+                </span>
+              </span>
+            </label>
+
+            <label class="framework-option">
+              <input type="checkbox" name="framework" value="semiVegetarian" />
+              <span class="framework-option-check" aria-hidden="true">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span class="framework-option-body">
+                <span class="framework-name">Semi-Vegetarian</span>
+                <span class="framework-desc">
+                  Mostly plant-based with occasional meat for gradual transitions.
+                </span>
+              </span>
+            </label>
+
+            <label class="framework-option">
+              <input type="checkbox" name="framework" value="keto" />
+              <span class="framework-option-check" aria-hidden="true">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span class="framework-option-body">
+                <span class="framework-name">Keto</span>
+                <span class="framework-desc">
+                  High-fat, low-carb approach — review carefully with her care team.
+                </span>
+              </span>
+            </label>
+
+            <label class="framework-option framework-option-reference">
+              <input type="checkbox" name="framework" value="bloodType" />
+              <span class="framework-option-check" aria-hidden="true">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span class="framework-option-body">
+                <span class="framework-name">Blood Type</span>
+                <span class="framework-desc">
+                  Reference classifications for discussion — not verified medical guidance.
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <div class="food-combining-note" aria-label="Food combining baseline information">
+            <span class="material-symbols-outlined food-combining-note-icon" aria-hidden="true"
+              >sync</span
+            >
+            <p>
+              <strong>Food Combining</strong> — baseline reference for digestion. Can be layered on
+              any selected framework when Combine Rules is enabled.
+            </p>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- Conditions section -->
+      <section class="conditions-section panel" id="conditions-section">
+        <div class="panel-header stacked-mobile">
+          <div>
+            <p class="section-label">Step 1</p>
+            <h2>Add a condition</h2>
+            <p class="section-copy">
+              Use short symptom phrases like <em>fatigue</em>, <em>nausea</em>, or
+              <em>loss of appetite</em>.
+            </p>
+          </div>
+          <button id="clear-form" class="text-button" type="button">Clear form</button>
+        </div>
+
+        <form id="condition-form" class="condition-form">
+          <label>
+            Condition or diagnosis
+            <input
+              id="condition-name"
+              name="condition-name"
+              placeholder="Example: chemotherapy side effects"
+              required
+            />
+          </label>
+
+          <label>
+            Symptoms
+            <textarea
+              id="condition-symptoms"
+              name="condition-symptoms"
+              rows="4"
+              placeholder="Example: fatigue, nausea, loss of appetite"
+              required
+            ></textarea>
+          </label>
+
+          <label>
+            Foods, meals, or approaches that seem to help
+            <textarea
+              id="condition-diet-helpful"
+              name="condition-diet-helpful"
+              rows="3"
+              placeholder="Example: smoothies, hydration, soft foods, small frequent meals"
+            ></textarea>
+          </label>
+
+          <label>
+            Foods to avoid or ask the care team about
+            <textarea
+              id="condition-diet-avoid"
+              name="condition-diet-avoid"
+              rows="3"
+              placeholder="Example: spicy foods, alcohol, rough foods, supplements"
+            ></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button id="add-condition" class="primary-button" type="submit">
+              Add this condition
+            </button>
+            <p class="helper-copy">You can add as many conditions as needed.</p>
+          </div>
+        </form>
+
+        <section class="saved-section">
+          <div class="inline-heading stacked-mobile">
+            <div>
+              <p class="section-label">Step 2</p>
+              <h3>Review saved conditions</h3>
+            </div>
+            <div id="condition-count" class="summary-badge">0 saved</div>
+          </div>
+          <div id="condition-list" class="condition-list"></div>
+        </section>
+      </section>
+
+      <!-- Results section -->
+      <section class="results-section panel">
+        <div class="results-topbar">
+          <div>
+            <p class="section-label">Step 3</p>
+            <h2>Review overlap and next questions</h2>
+            <p class="section-copy">
+              These cards help surface what repeats across conditions so her care team can
+              prioritize what matters most right now.
+            </p>
+          </div>
+          <button id="run-ai-analysis" class="secondary-button" type="button">
+            <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+            Run AI Analysis
+          </button>
+        </div>
+
+        <div class="overview-grid">
+          <article class="overview-tile">
+            <span class="overview-label">Conditions</span>
+            <strong id="conditions-total" class="overview-value">0</strong>
+          </article>
+          <article class="overview-tile">
+            <span class="overview-label">Shared symptoms</span>
+            <strong id="shared-symptom-total" class="overview-value">0</strong>
+          </article>
+          <article class="overview-tile">
+            <span class="overview-label">Shared food themes</span>
+            <strong id="shared-diet-total" class="overview-value">0</strong>
+          </article>
+        </div>
+
+        <div class="results-grid">
+          <section class="result-card">
+            <div class="card-heading">
+              <h3>Overlapping symptoms</h3>
+              <p>Symptoms that appear in more than one condition.</p>
+            </div>
+            <div id="symptom-overlap" class="result-content"></div>
+          </section>
+
+          <section class="result-card">
+            <div class="card-heading">
+              <h3>Shared food themes</h3>
+              <p>Repeated patterns from the notes you entered.</p>
+            </div>
+            <div id="diet-themes" class="result-content"></div>
+          </section>
+
+          <section class="result-card nutrition-card">
+            <div class="card-heading">
+              <h3>Nutritional options</h3>
+              <p>
+                Foods that align across selected frameworks, plus cautions and conflicts to review
+                with her clinician.
+              </p>
+            </div>
+            <div id="nutrition-options" class="result-content"></div>
+          </section>
+
+          <section class="result-card">
+            <div class="card-heading">
+              <h3>Questions for the care team</h3>
+              <p>Use these to prepare for a visit or call.</p>
+            </div>
+            <div id="doctor-questions" class="result-content"></div>
+          </section>
+
+          <section class="result-card ai-card">
+            <div class="card-heading with-action">
+              <div>
+                <h3>Summary</h3>
+                <p>A cautious summary for discussion, not a diagnosis.</p>
+              </div>
+            </div>
+            <div id="ai-summary" class="result-content"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="quote-section" aria-label="Inspirational quote">
+        <blockquote>
+          "The food you eat can be either the safest and most powerful form of medicine or the
+          slowest form of poison."
+        </blockquote>
+        <cite>— Ann Wigmore</cite>
+      </section>
+    </main>
+
+    <template id="condition-item-template">
+      <article class="condition-item">
+        <div class="condition-title-row">
+          <div>
+            <h4 class="condition-title"></h4>
+            <p class="condition-subtitle">Included in the shared review</p>
+          </div>
+          <button class="delete-button" type="button">Remove</button>
+        </div>
+
+        <div class="condition-chip-group" data-role="symptoms-group">
+          <p class="field-label">Symptoms</p>
+          <div class="chip-wrap" data-role="symptoms"></div>
+        </div>
+
+        <div class="condition-chip-group" data-role="helpful-group">
+          <p class="field-label">Helpful notes</p>
+          <div class="chip-wrap" data-role="helpful"></div>
+        </div>
+
+        <div class="condition-chip-group" data-role="avoid-group">
+          <p class="field-label">Cautions to review</p>
+          <div class="chip-wrap" data-role="avoid"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./nutrition-engine.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+{
+  "id": "pescetarian",
+  "name": "Pescetarian",
+  "type": "category-list",
+  "categories": {
+    "Vegetables": [
+      "Avocados",
+      "Broccoli",
+      "Carrots",
+      "Cilantro",
+      "Garlic",
+      "Ginger",
+      "Green onions",
+      "Kale",
+      "Lemons",
+      "Mixed greens",
+      "Mushrooms",
+      "Onions",
+      "Parsley",
+      "Red pepper",
+      "Spinach",
+      "Sweet potatoes",
+      "Swiss chard",
+      "Tomatoes",
+      "Zucchini"
+    ],
+    "Fish": [
+      "Haddock fillets",
+      "Salmon fillets",
+      "Salmon in a can",
+      "Sardines in a tin",
+      "Tilapia fillets",
+      "Tuna in a can"
+    ],
+    "Other Animal Protein": [
+      "Eggs"
+    ],
+    "Grains": [
+      "Oatmeal",
+      "Quinoa",
+      "Quinoa or rice pasta"
+    ],
+    "Beans, Nuts, and Seeds": [
+      "Almonds",
+      "Black Beans",
+      "Brazil Nuts",
+      "Chia Seeds",
+      "Chickpeas",
+      "Flax Seeds",
+      "Lentils"
+    ],
+    "Dairy": [
+      "Almond milk",
+      "Cashew milk",
+      "Goats cheese",
+      "Goats milk yoghurt"
+    ],
+    "Fruits": [
+      "Apples",
+      "Bananas",
+      "Mixed berries",
+      "Oranges"
+    ],
+    "Cooking and Baking": [
+      "Almond flour",
+      "Avocado Oil",
+      "Cacao",
+      "Coconut Milk",
+      "Coconut Oil",
+      "Crushed tomatoes",
+      "Extra Virgin Olive Oil",
+      "Maple Syrup",
+      "Nutritional Yeast",
+      "Rice Vinegar",
+      "Seasome Oil",
+      "Tapioca flour",
+      "Vegetable broth"
+    ],
+    "Condiments": [
+      "Apple Cider Vinegar",
+      "Kimchi",
+      "Mayonnaise",
+      "Mustard",
+      "Nut butters"
+    ],
+    "Herbs and Spices": [
+      "Basil",
+      "Chili Powder",
+      "Cinnamon",
+      "Cumin",
+      "Curry Spice",
+      "Oregano",
+      "Paprika",
+      "Rosemary",
+      "Thyme",
+      "Tumeric"
+    ]
+  },
+  "foodCount": 72
+}

@@ -1,0 +1,11 @@
+# Netlify custom headers (publish root = project root)
+# Applies to all paths when deployed on Netlify.
+# Note: Netlify does not process .htaccess — UA blocking requires Edge Functions.
+
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/robots.txt
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex

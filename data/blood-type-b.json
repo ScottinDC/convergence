@@ -1,0 +1,234 @@
+{
+  "id": "bloodTypeB",
+  "name": "B Blood Type",
+  "type": "blood-type",
+  "categories": {
+    "Meat": {
+      "beneficial": [
+        "Beef",
+        "Lamb",
+        "Mutton",
+        "Pheasant",
+        "Rabbit",
+        "Turkey",
+        "Veal",
+        "Venison"
+      ],
+      "avoid": [
+        "Chicken",
+        "Cornish hen",
+        "Duck",
+        "Goose",
+        "Partridge",
+        "Pork",
+        "Quail"
+      ],
+      "neutral": []
+    },
+    "Fish / Seafood": {
+      "beneficial": [
+        "Cod",
+        "Flounder",
+        "Halibut",
+        "Salmon",
+        "Sole",
+        "Trout"
+      ],
+      "avoid": [
+        "All shellFish",
+        "Anchovy",
+        "Barracuda",
+        "Beluga",
+        "Clam",
+        "Crab",
+        "CrayFish",
+        "Eel",
+        "Etc.",
+        "Frog",
+        "Lobster",
+        "Lox octopus",
+        "Mussel",
+        "Oyster",
+        "Sea bass",
+        "Shrimp",
+        "Striped bass",
+        "Turtle",
+        "Yellowtail"
+      ],
+      "neutral": []
+    },
+    "Dairy": {
+      "beneficial": [
+        "Cottage cheese",
+        "Farmer",
+        "Feta",
+        "Goat cheese and milk",
+        "Kefir",
+        "Milk",
+        "Mozzarella",
+        "Ricotta",
+        "Yogurt"
+      ],
+      "avoid": [
+        "American cheese",
+        "Blue cheese",
+        "Ice cream",
+        "String cheese"
+      ],
+      "neutral": []
+    },
+    "Fat": {
+      "beneficial": [
+        "Corn oil",
+        "Cottonseed oil",
+        "Olive Oil",
+        "Peanut oil",
+        "Safflower oil",
+        "Sesame oil",
+        "Sunflower oil"
+      ],
+      "avoid": [
+        "Canola oil"
+      ],
+      "neutral": []
+    },
+    "Nut": {
+      "beneficial": [
+        "Walnut"
+      ],
+      "avoid": [
+        "Cashew",
+        "Filbert",
+        "Peanut",
+        "Pine nut",
+        "Pistachio",
+        "Pumpkin seed",
+        "Sesame seed",
+        "Sunflower seed"
+      ],
+      "neutral": []
+    },
+    "Grain": {
+      "beneficial": [
+        "Brown rice bread",
+        "Essene bread",
+        "Ezekiel bread",
+        "Fin crips",
+        "Millet",
+        "Oatmeal (bran, flour)",
+        "Puffed rice",
+        "Rice (bran, flour)",
+        "Spelt",
+        "Wasa bread"
+      ],
+      "avoid": [
+        "Amaranth",
+        "Barley",
+        "Bread and noodles made with these grain products",
+        "Buckwheat",
+        "Corn",
+        "Couscous",
+        "Kasha",
+        "Products such as flour",
+        "Rye",
+        "Seven-grain",
+        "Shredded wheat",
+        "Wheat (bran, germ, bulgur, durum, whole and white)",
+        "Wild rice"
+      ],
+      "neutral": []
+    },
+    "Vegetable": {
+      "beneficial": [
+        "Green leafy Vegetables"
+      ],
+      "avoid": [
+        "Artichoke",
+        "Avacado",
+        "Olive",
+        "Pumpkin",
+        "Radish",
+        "Rhubarb",
+        "Sprouts",
+        "Tempeh",
+        "Tofu",
+        "Tomato"
+      ],
+      "neutral": []
+    },
+    "Fruit": {
+      "beneficial": [
+        "Banana",
+        "Cranberry",
+        "Grape",
+        "Papaya",
+        "Pineapple"
+      ],
+      "avoid": [
+        "Cocunut",
+        "Persimmon",
+        "Pomergrante",
+        "Prickly pear",
+        "StarFruit"
+      ],
+      "neutral": []
+    },
+    "Spice/Additive/Condiment": {
+      "beneficial": [
+        "Cayenne eppper",
+        "Curry",
+        "Ginger",
+        "Horseradish"
+      ],
+      "avoid": [
+        "Allspice",
+        "Almond extract",
+        "Barley malt sweetener",
+        "Cinnamon",
+        "Corn syrup",
+        "Cornstarch",
+        "Gelatin",
+        "Ketuchup",
+        "Pepper"
+      ],
+      "neutral": []
+    },
+    "Beverage": {
+      "beneficial": [
+        "Ginger",
+        "Ginseng",
+        "Green teas",
+        "Licorice",
+        "Peppermint",
+        "Raspberry leaf",
+        "Rose hip",
+        "Sage"
+      ],
+      "avoid": [
+        "Aloe",
+        "Coltsfoot",
+        "Corn silk",
+        "Distilled liquor",
+        "Fenugreek",
+        "Gentian",
+        "Goldenseal",
+        "Hops",
+        "Linden",
+        "Mullein",
+        "Red clover",
+        "Rhubarb",
+        "Seltzer water",
+        "Senna",
+        "Shepherd's purse",
+        "Skullcap",
+        "Soda"
+      ],
+      "neutral": []
+    }
+  },
+  "foodCount": {
+    "beneficial": 58,
+    "avoid": 92,
+    "neutral": 0
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "dash": {
+    "id": "dash",
+    "name": "DASH Diet",
+    "shortName": "DASH",
+    "description": "Dietary Approaches to Stop Hypertension emphasizes vegetables, fruits, whole grains, lean protein, and limited sodium.",
+    "framing": "Often discussed for blood pressure and heart health. Use as a conversation framework with the care team, not as a standalone treatment plan."
+  },
+  "mediterranean": {
+    "id": "mediterranean",
+    "name": "Mediterranean Diet",
+    "shortName": "Mediterranean",
+    "description": "Emphasizes vegetables, legumes, whole grains, olive oil, fish, and moderate dairy with limited processed foods.",
+    "framing": "Frequently referenced for cardiovascular and inflammatory conditions. Confirm fit with current treatment goals."
+  },
+  "healthyVegetarian": {
+    "id": "healthyVegetarian",
+    "name": "Healthy Vegetarian",
+    "shortName": "Vegetarian",
+    "description": "Plant-forward eating that excludes meat, poultry, and fish while emphasizing vegetables, fruits, whole grains, legumes, nuts, and dairy or eggs as tolerated.",
+    "framing": "Can support fiber and phytonutrient intake, but protein, iron, and B12 adequacy should be reviewed with a dietitian—especially during cancer treatment."
+  },
+  "keto": {
+    "id": "keto",
+    "name": "Ketogenic Diet",
+    "shortName": "Keto",
+    "description": "Very low carbohydrate, higher fat approach intended to shift the body toward ketone metabolism.",
+    "framing": "Can conflict with other medical nutrition needs during cancer care. Requires explicit clinician review before use."
+  },
+  "pescetarian": {
+    "id": "pescetarian",
+    "name": "Pescetarian Diet",
+    "shortName": "Pescetarian",
+    "description": "Mostly plant-based eating that includes fish and seafood while excluding other meats.",
+    "framing": "Adds omega-3-rich seafood to a vegetarian pattern. Confirm seafood safety, mercury limits, and treatment interactions with the care team."
+  },
+  "semiVegetarian": {
+    "id": "semiVegetarian",
+    "name": "Semi-Vegetarian / Flexitarian",
+    "shortName": "Semi-Vegetarian",
+    "description": "Primarily plant-based eating with occasional meat, poultry, or fish—also called flexitarianism.",
+    "framing": "Offers flexibility while keeping plants central. Useful as a discussion framework when full vegetarianism feels too restrictive."
+  },
+  "bloodType": {
+    "id": "bloodType",
+    "name": "Blood Type / GenoType Diet",
+    "shortName": "Blood Type",
+    "description": "Framework that classifies foods as most beneficial, neutral, or to avoid based on ABO blood type.",
+    "framing": "Evidence is mixed and this is not standard oncology nutrition guidance. Treat classifications as discussion prompts with a registered dietitian."
+  }
+}

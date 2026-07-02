@@ -1,0 +1,81 @@
+# ComboDiet — block all crawlers, bots, and AI/LLM scrapers (Apache 2.4+)
+# Normal browsers (Mozilla/5.0, etc.) are not matched by these rules.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Block missing or empty User-Agent (common for automated scrapers)
+  RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+  RewriteCond %{HTTP_USER_AGENT} ^-?$
+  RewriteRule ^ - [F,L]
+
+  # Known LLM / AI crawlers
+  RewriteCond %{HTTP_USER_AGENT} (GPTBot|ChatGPT-User|OAI-SearchBot) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (Claude-Web|anthropic-ai|ClaudeBot) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (Google-Extended|Bytespider|CCBot) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (PerplexityBot|Amazonbot|FacebookBot|meta-externalagent) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (cohere-ai|Diffbot|ImagesiftBot|Omgilibot|YouBot) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (Applebot-Extended|Applebot|Googlebot|bingbot|BingPreview) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (Slurp|DuckDuckBot|Baiduspider|YandexBot|Sogou|Exabot) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (facebot|ia_archiver|SemrushBot|AhrefsBot|MJ12bot|DotBot) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (PetalBot|SeznamBot|MegaIndex|rogerbot|Screaming Frog) [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} (DataForSeoBot|serpstatbot|BLEXBot|ZoominfoBot) [NC,OR]
+  # Generic bot / crawler / spider / scraper patterns (user requested: no robots at all)
+  RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider|scraper|archiver|preview|fetcher|indexer) [NC]
+  RewriteRule ^ - [F,L]
+</IfModule>
+
+# Alternate detection via environment variable (Apache 2.4 authz)
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase User-Agent "^$" bad_bot
+  SetEnvIfNoCase User-Agent "GPTBot" bad_bot
+  SetEnvIfNoCase User-Agent "ChatGPT-User" bad_bot
+  SetEnvIfNoCase User-Agent "OAI-SearchBot" bad_bot
+  SetEnvIfNoCase User-Agent "Claude-Web" bad_bot
+  SetEnvIfNoCase User-Agent "anthropic-ai" bad_bot
+  SetEnvIfNoCase User-Agent "ClaudeBot" bad_bot
+  SetEnvIfNoCase User-Agent "Google-Extended" bad_bot
+  SetEnvIfNoCase User-Agent "Bytespider" bad_bot
+  SetEnvIfNoCase User-Agent "CCBot" bad_bot
+  SetEnvIfNoCase User-Agent "PerplexityBot" bad_bot
+  SetEnvIfNoCase User-Agent "Amazonbot" bad_bot
+  SetEnvIfNoCase User-Agent "FacebookBot" bad_bot
+  SetEnvIfNoCase User-Agent "meta-externalagent" bad_bot
+  SetEnvIfNoCase User-Agent "cohere-ai" bad_bot
+  SetEnvIfNoCase User-Agent "Diffbot" bad_bot
+  SetEnvIfNoCase User-Agent "ImagesiftBot" bad_bot
+  SetEnvIfNoCase User-Agent "Omgilibot" bad_bot
+  SetEnvIfNoCase User-Agent "YouBot" bad_bot
+  SetEnvIfNoCase User-Agent "Applebot-Extended" bad_bot
+  SetEnvIfNoCase User-Agent "Applebot" bad_bot
+  SetEnvIfNoCase User-Agent "Googlebot" bad_bot
+  SetEnvIfNoCase User-Agent "bingbot" bad_bot
+  SetEnvIfNoCase User-Agent "Slurp" bad_bot
+  SetEnvIfNoCase User-Agent "DuckDuckBot" bad_bot
+  SetEnvIfNoCase User-Agent "Baiduspider" bad_bot
+  SetEnvIfNoCase User-Agent "YandexBot" bad_bot
+  SetEnvIfNoCase User-Agent "(bot|crawler|spider|scraper|archiver|preview|fetcher|indexer)" bad_bot
+</IfModule>
+
+<IfModule mod_authz_core.c>
+  <RequireAll>
+    Require all granted
+    Require not env bad_bot
+  </RequireAll>
+</IfModule>
+
+# Apache 2.2 fallback
+<IfModule !mod_authz_core.c>
+  <IfModule mod_authz_host.c>
+    Order Allow,Deny
+    Allow from all
+    Deny from env=bad_bot
+  </IfModule>
+</IfModule>
+
+# Security headers on all responses
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

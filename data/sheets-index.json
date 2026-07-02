@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "source": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRn1hG8ENWsGE0u8Y_Xip-3J841c4ZHPSvTyn5EAGI44SHiBB-EQ2-dsBdgXtwUhQ/pub?output=xlsx",
+    "exportedAt": "2026-07-02T21:28:30.095Z",
+    "sheetCount": 3
+  },
+  "files": [
+    {
+      "sheetName": "By Name 01",
+      "filename": "by-name.json",
+      "path": "data/by-name.json",
+      "recordCount": 194,
+      "sizeBytes": 22390,
+      "dietCount": 5
+    },
+    {
+      "sheetName": "By Name 02",
+      "filename": "by-name-2.json",
+      "path": "data/by-name-2.json",
+      "recordCount": 511,
+      "sizeBytes": 70984,
+      "dietCount": 10
+    },
+    {
+      "sheetName": "By Category",
+      "filename": "by-cat.json",
+      "path": "data/by-cat.json",
+      "recordCount": 1247,
+      "sizeBytes": 35206,
+      "dietCount": 10
+    }
+  ],
+  "combined": {
+    "filename": "all-sheets.json",
+    "path": "data/all-sheets.json",
+    "sizeBytes": 154248
+  }
+}

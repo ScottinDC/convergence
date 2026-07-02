@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Patient Record - Elena Rodriguez | ComboDiet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(251, 249, 244, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(71, 97, 74, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbcc",
+                        "inverse-surface": "#30312e",
+                        "outline-variant": "#c3c8bf",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#424942",
+                        "secondary-fixed-dim": "#c1c8c0",
+                        "on-surface": "#1b1c19",
+                        "primary": "#47614a",
+                        "tertiary-fixed-dim": "#e8beac",
+                        "primary-container": "#5f7a61",
+                        "surface": "#fbf9f4",
+                        "on-secondary-container": "#5d645d",
+                        "inverse-primary": "#b1ceb1",
+                        "surface-variant": "#e4e2dd",
+                        "inverse-on-surface": "#f2f1ec",
+                        "outline": "#737971",
+                        "on-background": "#1b1c19",
+                        "on-surface-variant": "#434842",
+                        "surface-container-high": "#eae8e3",
+                        "surface-bright": "#fbf9f4",
+                        "on-tertiary-container": "#fffaf8",
+                        "on-primary-container": "#efffec",
+                        "secondary-fixed": "#dde4db",
+                        "surface-container-highest": "#e4e2dd",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#334d36",
+                        "surface-dim": "#dbdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4032",
+                        "secondary-container": "#dbe2d9",
+                        "surface-tint": "#4a654d",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2c160b",
+                        "tertiary-container": "#8e6c5c",
+                        "surface-container-low": "#f5f3ee",
+                        "tertiary": "#745445",
+                        "background": "#fbf9f4",
+                        "surface-container": "#f0eee9",
+                        "on-primary-fixed": "#07200e",
+                        "secondary": "#596059",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#cceacc",
+                        "primary-fixed-dim": "#b1ceb1",
+                        "on-secondary-fixed": "#171d18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "48px",
+                        "gutter": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "title-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- Top AppBar Component -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim shadow-sm dark:shadow-none transition-all duration-200">
+<div class="flex items-center justify-between px-md h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-150 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">ComboDiet</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-primary dark:text-primary-fixed-dim font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Dashboard</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Patients</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Schedule</a>
+</nav>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20 active:scale-95 duration-150 cursor-pointer">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvclKzuvtiC5bohJ2whRuxqw_E-kgH1pQdhnApZQQjG80M8OirfZHIVlowSvwpDdHdMb0lAxoYFDpQ5_PqVT2Hjm2V4s_y3AdK-DLM3yp3yY7wZfkD6Tklf_FCURYB3n9zgY_jcezH2rWS8zjJuNlDsbmYlTG2qIUe2dGZme7_cXngSIvs50hHjDHOCG6GG_AJmictola9YYhgYvXY4lUnexDEgGMVjIEt_2jcpagluz_Cl9XtDzTmausPWKQP9NxTuVD-KB6_1hE"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-md md:px-lg py-8 md:py-12">
+<!-- Header Section: Patient Profile -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="flex items-center gap-6">
+<div class="relative">
+<div class="w-24 h-24 md:w-32 rounded-xl overflow-hidden ring-4 ring-primary-fixed">
+<img alt="Elena Rodriguez" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_2BShoxFkEKCVUZhHg71dWEs2mPiFdkmp5dsxkSoPxLngC6Ho4OHBut9Eppxe9gOYPqy3Qvv8vgucGhTzPRziqZpGGPA4DUUG5RPIRhDQNaRAMdey9UeYu7e4XtMmIMZwixq5sSMW4xxpUufHIZbZ2lJHsud7ouokVS552NDd0M-hYrP6ID4Qs_lSsIT-I-rWm7eCkN_wns8L76lJcdvNzand3TnQwoXZTSgcP1-Eh0UqOYrrw7PoFlcWe3lQdS-MeJTS-RCMlVE"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary text-on-primary p-1.5 rounded-full border-4 border-background">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div>
+<h2 class="font-display-lg text-[32px] md:text-display-lg text-on-surface">Elena Rodriguez</h2>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span> 38 years old • Female
+                </p>
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-lg font-label-md text-label-md">Active Treatment</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-lg font-label-md text-label-md">Hypertension Risk</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 border border-primary text-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined">edit</span> Edit Record
+            </button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:opacity-90 transition-all shadow-sm active:scale-95">
+                New Entry
+            </button>
+</div>
+</section>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Vitals Column -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Heart Rate Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant shadow-sm transition-all hover:shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary-fixed/30 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="text-on-surface-variant font-caption text-caption">Updated 2h ago</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">72</span>
+<span class="text-on-surface-variant font-body-md text-body-md">BPM</span>
+</div>
+<p class="mt-2 font-label-md text-label-md text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_flat</span> Steady range
+                </p>
+</div>
+<!-- Blood Pressure Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant shadow-sm transition-all hover:shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-container rounded-lg text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">blood_pressure</span>
+</div>
+<span class="text-on-surface-variant font-caption text-caption">Last check: 09:15 AM</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">118/76</span>
+<span class="text-on-surface-variant font-body-md text-body-md">mmHg</span>
+</div>
+<p class="mt-2 font-label-md text-label-md text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Optimal
+                </p>
+</div>
+<!-- BMI Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant shadow-sm transition-all hover:shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-tertiary-fixed rounded-lg text-tertiary">
+<span class="material-symbols-outlined">monitor_weight</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">23.4</span>
+</div>
+<div class="mt-4 w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 45%;"></div>
+</div>
+<p class="mt-2 font-caption text-caption text-on-surface-variant">Health Range: 18.5 - 24.9</p>
+</div>
+</div>
+<!-- Nutritional Insight & Diet Rules -->
+<div class="md:col-span-8 flex flex-col gap-gutter">
+<!-- Nutritional Insight Card -->
+<div class="relative overflow-hidden bg-primary-container rounded-xl p-8 text-on-primary-container shadow-lg min-h-[240px] flex flex-col justify-center">
+<div class="absolute top-0 right-0 p-8 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+<span class="material-symbols-outlined text-[140px]">spa</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-lg text-headline-lg mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined">lightbulb</span> Nutritional Insight
+                    </h3>
+<p class="font-body-lg text-body-lg leading-relaxed max-w-2xl">
+                        "Elena, your metabolic response to the new fiber-dense protocol has been exceptional. We’re seeing a significant stabilization in post-meal energy peaks. Your dedication to the hydration window is showing clear results in your latest cellular recovery markers. Keep moving forward—you're built for this healing journey."
+                    </p>
+</div>
+</div>
+<!-- Diet Rules & Daily Protocol -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm flex flex-col overflow-hidden">
+<div class="px-8 py-6 border-b border-outline-variant/30 flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Current Diet Protocol</h3>
+<span class="material-symbols-outlined text-primary">restaurant_menu</span>
+</div>
+<div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Protocol items -->
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container-high border border-transparent hover:border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-primary-fixed/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">opacity</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Low Sodium (Under 1500mg)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Focus on potassium-rich whole foods to balance blood pressure.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container-high border border-transparent hover:border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Protein-Starch Separation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Avoiding high protein and complex carbs in the same sitting.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container-high border border-transparent hover:border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed/30 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined">timer_3</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">14/10 Fasting Window</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Maintaining a 14-hour fasting period for metabolic flexibility.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container-high border border-transparent hover:border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-primary-fixed/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Chlorophyll Boost</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">A green juice or salad before every lunch to prime gut enzymes.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Logs Section -->
+<section class="mt-12">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Recent Progress Logs</h3>
+<button class="text-primary font-label-md text-label-md hover:underline active:scale-95">View History</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Log Entry 1 -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-wrap md:flex-nowrap items-center gap-6 transition-all hover:shadow-md">
+<div class="text-on-surface-variant w-32 font-label-md text-label-md">Oct 24, 2023</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<h4 class="font-title-lg text-title-lg text-on-surface">Excellent Energy Stability</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Patient reports no afternoon fatigue since starting the starch-separation rule.</p>
+</div>
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Salad" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoZIW5lEEneb7ENbvWqzsjSqxWhKy-yYBcXgrkXa_8hSQVGOESRlO1lFQhrm_U8T_fUF2uwQbBkOsmnDNTD3OD79pCIxbfQ2KiwqNSG0G3HtG35yXRdGit4IFyiWaAF-sF-QNvZaouL22ZOzz9sXV5-w2N7iNcn7DUIg959Q0lI19zKjwCG0P9mZ8kTXIUC5Q0OwL7iqBiI7rq5A8KD1vzFdmshVj15I9XfaHkzYsxZu3rtYPPiMY47tWO8klMvqI6OSWkDBB_ci0"/>
+<img alt="Scale" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKP0v5pFkPCiPGFEC2UNcJWVV9CRJ3_4-xKqqscnvVx93pfCbE_KNElVml_VKiaEKYud5DJdQXt23qSyIVbLKvr_250HvWVOLD_snvIONe56zwx77UkU9aF39VNyBAP73Zp3Sw9eeR3Opix-28V9ULs59sVInIwZLXQv_A-TuRq9KbT15S-5COHHaPdLzCMF-U9uqUlyMt52MEQ1clcGDAnaobOxoP90xW1yF82v3ektJNOBfSOkXzSN1cIsdqh3sfbDHUHR64G5c"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">more_vert</button>
+</div>
+<!-- Log Entry 2 -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-wrap md:flex-nowrap items-center gap-6 transition-all hover:shadow-md">
+<div class="text-on-surface-variant w-32 font-label-md text-label-md">Oct 21, 2023</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<h4 class="font-title-lg text-title-lg text-on-surface">Minor Sodium Spike</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Increased fluid retention noted after restaurant meal; adjusted hydration for next 48h.</p>
+</div>
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Graph" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO5rKUsB17IbOeTOR8YHQ5BrxZAgzo6PtUwZtk3OfOYWu4bvIjKtuQ-BjAFceewM3ZKGvfJAJ5vn9jEQfbAEHMaWq0pyCx9r4TWaGrAXdS90hV6r1Y1JC25DG2r9CpMijpuirojafM-brKGe9KkZgNpSEm8q2i-liz4rZXHyksDfA8Zn1nq_f0BMY8YbIpJLdyMMl4h4AIR4BEwfS92kFOXqYsnwkF5YT-OpN1h4kPDhn6o-vhJz6Y8eg2kRA1vRD-yjkSxJkJIfM"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">more_vert</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar Component -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface dark:bg-surface-container shadow-[0_-4px_20px_rgba(71,97,74,0.04)] md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-4 py-1 active:scale-90 duration-200">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-md text-label-md">Explorer</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">Guides</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label-md text-label-md">Records</span>
+</button>
+</nav>
+<footer class="mt-24 pb-32 md:pb-12 text-center">
+<p class="text-on-surface-variant font-caption text-caption">ComboDiet Clinical Systems • HIPPA Compliant Environment</p>
+</footer>
+<script>
+    // Subtle entry animations for cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.bg-surface-container-lowest, .bg-primary-container').forEach(card => {
+        card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+        observer.observe(card);
+    });
+</script>
+</body></html>

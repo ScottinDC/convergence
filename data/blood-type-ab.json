@@ -1,0 +1,277 @@
+{
+  "id": "bloodTypeAb",
+  "name": "AB Blood Type",
+  "type": "blood-type",
+  "categories": {
+    "Meat": {
+      "beneficial": [
+        "Lamb",
+        "Mutton",
+        "Rabbit",
+        "Turkey"
+      ],
+      "avoid": [
+        "Beef",
+        "Chicken",
+        "Cornish hen",
+        "Duck",
+        "Goose",
+        "Partridge",
+        "Pork",
+        "Quail",
+        "Veal",
+        "Venison"
+      ],
+      "neutral": []
+    },
+    "Fish / Seafood": {
+      "beneficial": [
+        "Cod",
+        "Grouper",
+        "Hake",
+        "Mackerel",
+        "Mahimahi",
+        "MonkFish",
+        "Ocean perch",
+        "Pickerel",
+        "Pike",
+        "Porgy",
+        "Red snapper",
+        "SailFish",
+        "Sardine",
+        "Shad",
+        "Snail",
+        "Sturgeon",
+        "Trout",
+        "Tuna"
+      ],
+      "avoid": [
+        "All shellFish",
+        "Anchovy",
+        "Barracuda",
+        "Beluga",
+        "Bluegill bass",
+        "Clam",
+        "Crab",
+        "CrayFish",
+        "Eel",
+        "Etc.",
+        "Flounder",
+        "Frog",
+        "Haddock",
+        "Halibut",
+        "Herring",
+        "Lobster",
+        "Lox octopus",
+        "Mussel",
+        "Oyster",
+        "Sea bass",
+        "Shrimp",
+        "Striped bass",
+        "Turtle",
+        "Yellowtail"
+      ],
+      "neutral": []
+    },
+    "Dairy": {
+      "beneficial": [
+        "Egg",
+        "Goat cheese and milk",
+        "Kefir",
+        "Mozzarella",
+        "Non-fat sour cream",
+        "Ricotta",
+        "Yogurt"
+      ],
+      "avoid": [
+        "American cheese",
+        "Blue cheese",
+        "Brie",
+        "Buttermilk",
+        "Camembert",
+        "Ice cream",
+        "Parmesan",
+        "Provolone",
+        "Sherbet",
+        "Whole milk"
+      ],
+      "neutral": []
+    },
+    "Fat": {
+      "beneficial": [
+        "Olive oil (use sparingly)"
+      ],
+      "avoid": [
+        "Corn oil",
+        "Cottonseed oil",
+        "Safflower oil",
+        "Sesame oil",
+        "Sunflower oil"
+      ],
+      "neutral": []
+    },
+    "Nut": {
+      "beneficial": [
+        "Peanut",
+        "Walnut"
+      ],
+      "avoid": [
+        "Filbert",
+        "Poppy seed",
+        "Pumpkin seed",
+        "Sesame seed",
+        "Sunflower seed"
+      ],
+      "neutral": []
+    },
+    "Bean": {
+      "beneficial": [
+        "Lentil",
+        "Navy bean",
+        "Pinto bean",
+        "Red bean",
+        "Soy bean"
+      ],
+      "avoid": [
+        "Aduke bean",
+        "Azuki bean",
+        "Black bean",
+        "Black-eyed pea",
+        "Fava bean",
+        "Garbanzo",
+        "Kidney bean",
+        "Lima bean"
+      ],
+      "neutral": []
+    },
+    "Grain": {
+      "beneficial": [
+        "All kinds of rice and any products such as flour",
+        "Bread and noodles made with these Grains",
+        "Millet",
+        "Oat bran",
+        "Oatmeal",
+        "Puffed rice",
+        "Rice bran",
+        "Rye spelt",
+        "Sprouted wheat"
+      ],
+      "avoid": [
+        "Artichoke pasta",
+        "Buckwheat",
+        "Corn (any products such as flour, bread and noodles made with these)",
+        "Kamut",
+        "Kasha",
+        "Soba noodles"
+      ],
+      "neutral": []
+    },
+    "Vegetable": {
+      "beneficial": [
+        "Alfalfa sprout",
+        "All types of yams",
+        "Beet",
+        "Broccoli",
+        "Cauliflower",
+        "Celery",
+        "Cucumber",
+        "Eggplant",
+        "Garlic",
+        "Green leafy vegs",
+        "Maitake",
+        "Mushroom",
+        "Parsley",
+        "Parsnip",
+        "Sweet potato",
+        "Tempeh",
+        "Tofu"
+      ],
+      "avoid": [
+        "All kinds of bell pepper",
+        "Artichoke",
+        "Avocado",
+        "Black olive",
+        "Mung bean sprout",
+        "Radish",
+        "Radish sprout"
+      ],
+      "neutral": []
+    },
+    "Fruit": {
+      "beneficial": [
+        "All kinds of grapes and plums",
+        "Cherry",
+        "Cranberry",
+        "Gooseberry",
+        "GrapeFruit",
+        "Kiwi",
+        "Lemon",
+        "Loganberry",
+        "Pineapple"
+      ],
+      "avoid": [
+        "Banana",
+        "Coconut",
+        "Guava",
+        "Mango",
+        "Orange"
+      ],
+      "neutral": []
+    },
+    "Spice/Additive": {
+      "beneficial": [
+        "Curry",
+        "Garlic",
+        "Horseradish",
+        "Kelp",
+        "Miso",
+        "Parsley",
+        "Spice / Additive"
+      ],
+      "avoid": [
+        "Allspice",
+        "Almond extract",
+        "Anise",
+        "Barley malt",
+        "Black pepper",
+        "Caper",
+        "Cayenne pepper",
+        "Corn syrup",
+        "Cornstarch",
+        "Gelatin",
+        "Red pepper flake",
+        "Spice/Additive",
+        "Tapioca",
+        "Vinegar",
+        "White pepper"
+      ],
+      "neutral": []
+    },
+    "Beverage": {
+      "beneficial": [
+        "Alfalfa",
+        "Burdock root",
+        "Chamomile",
+        "Coffee or decaf coffee (1 cup/day)",
+        "Dandelion",
+        "Echinacea",
+        "Green tea (alt day use)",
+        "Hawthron",
+        "Licorice",
+        "Red wine (1 glass/day)",
+        "Strawberry leaf"
+      ],
+      "avoid": [
+        "Black tea",
+        "Distilled liquor",
+        "Soda"
+      ],
+      "neutral": []
+    }
+  },
+  "foodCount": {
+    "beneficial": 88,
+    "avoid": 98,
+    "neutral": 0
+  }
+}

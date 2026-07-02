@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "source": "Google Sheets export",
+  "sheets": [
+    "By Name 01",
+    "By Name 02",
+    "By Category"
+  ],
+  "diets": [
+    {
+      "id": "dash",
+      "file": "dash.json",
+      "name": "The Dash Diet",
+      "type": "category-list"
+    },
+    {
+      "id": "mediterranean",
+      "file": "mediterranean.json",
+      "name": "Mediterranean Diet",
+      "type": "category-list"
+    },
+    {
+      "id": "healthyVegetarian",
+      "file": "healthy-vegetarian.json",
+      "name": "Healthy Vegetarian",
+      "type": "category-list"
+    },
+    {
+      "id": "keto",
+      "file": "keto.json",
+      "name": "Keto",
+      "type": "category-list"
+    },
+    {
+      "id": "pescetarian",
+      "file": "pescetarian.json",
+      "name": "Pescetarian",
+      "type": "category-list"
+    },
+    {
+      "id": "semiVegetarian",
+      "file": "semi-vegetarian.json",
+      "name": "Semi-Vegetarianism",
+      "type": "category-list"
+    },
+    {
+      "id": "bloodTypeAb",
+      "file": "blood-type-ab.json",
+      "name": "AB Blood Type",
+      "type": "blood-type"
+    },
+    {
+      "id": "bloodTypeA",
+      "file": "blood-type-a.json",
+      "name": "A Blood Type",
+      "type": "blood-type"
+    },
+    {
+      "id": "bloodTypeB",
+      "file": "blood-type-b.json",
+      "name": "B Blood Type",
+      "type": "blood-type"
+    },
+    {
+      "id": "bloodTypeO",
+      "file": "blood-type-o.json",
+      "name": "O Blood Type",
+      "type": "blood-type"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "dash",
+      "label": "DASH",
+      "dataFile": "dash.json",
+      "definitionId": "dash",
+      "group": "general"
+    },
+    {
+      "id": "mediterranean",
+      "label": "Mediterranean",
+      "dataFile": "mediterranean.json",
+      "definitionId": "mediterranean",
+      "group": "general"
+    },
+    {
+      "id": "healthyVegetarian",
+      "label": "Healthy Vegetarian",
+      "dataFile": "healthy-vegetarian.json",
+      "definitionId": "healthyVegetarian",
+      "group": "plant-based"
+    },
+    {
+      "id": "pescetarian",
+      "label": "Pescetarian",
+      "dataFile": "pescetarian.json",
+      "definitionId": "pescetarian",
+      "group": "plant-based"
+    },
+    {
+      "id": "semiVegetarian",
+      "label": "Semi-Vegetarian",
+      "dataFile": "semi-vegetarian.json",
+      "definitionId": "semiVegetarian",
+      "group": "plant-based"
+    },
+    {
+      "id": "keto",
+      "label": "Keto",
+      "dataFile": "keto.json",
+      "definitionId": "keto",
+      "group": "other"
+    },
+    {
+      "id": "bloodType",
+      "label": "Blood Type",
+      "dataFilePattern": "blood-type-{type}.json",
+      "definitionId": "bloodType",
+      "bloodTypes": [
+        "A",
+        "B",
+        "AB",
+        "O"
+      ],
+      "group": "blood-type"
+    }
+  ]
+}

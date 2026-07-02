@@ -1,0 +1,1677 @@
+{
+  "metadata": {
+    "source": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRn1hG8ENWsGE0u8Y_Xip-3J841c4ZHPSvTyn5EAGI44SHiBB-EQ2-dsBdgXtwUhQ/pub?output=xlsx",
+    "exportedAt": "2026-07-02T21:28:30.092Z",
+    "sheetName": "By Category"
+  },
+  "diets": {
+    "The Dash Diet": {
+      "Grains": [
+        "Brown rice",
+        "Quinoa",
+        "Whole wheat bread",
+        "Whole grain cereal",
+        "Whole wheat pasta"
+      ],
+      "Vegetables": [
+        "Broccoli",
+        "Carrots",
+        "Green Beans",
+        "Kale",
+        "Spinach",
+        "Squash",
+        "Tomatoes",
+        "Cucumbers"
+      ],
+      "Fruit": [
+        "Apples",
+        "Oranges",
+        "Grapes",
+        "GrapeFruit",
+        "Banana",
+        "Pineapples",
+        "Strawberries"
+      ],
+      "Fat-Free or Low-Fat Dairy": [
+        "Cheese",
+        "Cream",
+        "Milk",
+        "Yogurt"
+      ],
+      "Lean Protein": [
+        "Chicken",
+        "Eggs",
+        "Fish",
+        "Turkey"
+      ],
+      "Nuts, Seeds, and Legumes": [
+        "Almonds",
+        "Black Beans",
+        "Kidney Beans",
+        "Lentils",
+        "Peanuts",
+        "Pistachios",
+        "Split peas",
+        "Sunflower seeds",
+        "Walnuts"
+      ],
+      "Fats and Oils": [
+        "Canola oil",
+        "Low-fat mayonnaise",
+        "Olive oil",
+        "Safflower oil"
+      ],
+      "Sweets": [
+        "Jam",
+        "Jelly",
+        "Maple syrup",
+        "Sorbet"
+      ]
+    },
+    "Mediterranean Diet": {
+      "Beans": [
+        "Black Beans",
+        "Chickpeas (Garbanzo)",
+        "Hummus",
+        "Lentils",
+        "Pinto Beans",
+        "White Beans (Cannellini)"
+      ],
+      "Nuts and Seeds": [
+        "Almonds",
+        "Cashews",
+        "Flax",
+        "Peanuts",
+        "Pine nuts",
+        "Pumpkin seeds",
+        "Sunflower seeds",
+        "Walnuts"
+      ],
+      "Healthy Oils and Fats": [
+        "Extra-virgin olive oil",
+        "Avocado oil",
+        "Canola oil",
+        "Grape seed oil"
+      ],
+      "Grains": [
+        "Barley",
+        "Bread (e.g. loaf, pita)",
+        "Bulgur",
+        "Couscous",
+        "Oatmeal",
+        "Pasta",
+        "Polenta",
+        "Quinoa",
+        "Rice"
+      ],
+      "Seafood": [
+        "Clams",
+        "Cod",
+        "Crab",
+        "Salmon",
+        "Scallops",
+        "Shrimp",
+        "Tilapia",
+        "Tuna"
+      ],
+      "Dairy / Eggs": [
+        "Cheese",
+        "Low-fat milk",
+        "Plain or Greek yogurt",
+        "Eggs"
+      ]
+    },
+    "Healthy Vegetarian": {
+      "Vegetables": [
+        "Acorn squash",
+        "Artichoke",
+        "Arugula",
+        "Asparagus",
+        "Beet",
+        "Berries",
+        "Bell pepper",
+        "Broccoli",
+        "Brussels sprouts",
+        "Bok choy",
+        "Butternut squash",
+        "Cabbage",
+        "Carrots",
+        "Cauliflower",
+        "Collard greens",
+        "Cucumber",
+        "Eggplant",
+        "Green Beans",
+        "Kale",
+        "Lettuce",
+        "Mushroom",
+        "Onion",
+        "Parsnips",
+        "Potatoes",
+        "Romaine",
+        "Spinach",
+        "Squash",
+        "Swish chard",
+        "Sweet potatoes",
+        "Tomato",
+        "Zucchini"
+      ],
+      "Protein": [
+        "Tofu",
+        "Tempeh",
+        "Vegan sausage (Field Roast)",
+        "Tofurky",
+        "Cheese",
+        "Yogurt",
+        "Milk (Non-Dairy or dairy)",
+        "Eggs",
+        "Hummus"
+      ],
+      "Fruit": [
+        "Apples",
+        "Apricots",
+        "Bananas",
+        "Berries",
+        "Cherries",
+        "Dates",
+        "Figs",
+        "Grapes",
+        "Kiwi",
+        "Mango",
+        "Melon",
+        "Oranges",
+        "Peaches",
+        "Pears",
+        "Plums",
+        "Pineapple",
+        "Pomegranate",
+        "Watermelon"
+      ],
+      "Bulk Foods": [
+        "Almonds",
+        "Almond butter",
+        "Brown rice",
+        "Cashews",
+        "Chia seeds",
+        "Coconut flakes",
+        "Dried Beans",
+        "Dried Fruit",
+        "Ground flaxseed",
+        "Hemp hearts",
+        "Lentils",
+        "Peanut butter",
+        "Pumpkin seeds/pepitas",
+        "Quinoa",
+        "Rolled oats",
+        "Walnuts"
+      ],
+      "Frozen Foods": [
+        "Bread (Ezekial bread)",
+        "Frozen Fruit",
+        "Frozen Vegetables"
+      ],
+      "Pantry Staples": [
+        "Apple cider vinegar",
+        "Balsamic vinegar",
+        "Canned Beans",
+        "Canned Vegetables",
+        "Coconut milk",
+        "Coconut oil",
+        "Curry paste",
+        "Ginger paste",
+        "Hot sauce",
+        "Ketchup",
+        "Mustard",
+        "Nutritional yeast",
+        "Olive oil",
+        "Olives",
+        "Red wine vinegar",
+        "Rice vinegar",
+        "Salsa",
+        "Sriracha",
+        "Tomatoes (canned, dice)",
+        "Tahini",
+        "Teriyaki sauce",
+        "Tomato paste",
+        "Tomato sauce",
+        "Vanilla extract",
+        "Vegetable broth",
+        "Whole grain pasta"
+      ],
+      "Herbs and Spices": [
+        "Black pepper",
+        "Cumin",
+        "Curry powder",
+        "Garlic powder",
+        "Italian seasoning",
+        "Onion powder",
+        "Oregano",
+        "Rosemary",
+        "Salt",
+        "Smoked paprika",
+        "Taco seasoning"
+      ]
+    },
+    "Keto": {
+      "Meat": [
+        "Bacon",
+        "Bone broth",
+        "Breakfast sausage",
+        "Chicken breasts",
+        "Chicken legs",
+        "Chicken thighs",
+        "Chuck roast",
+        "Duck",
+        "Fish",
+        "Ground beef",
+        "Lobster",
+        "Luncheon meats",
+        "Pepperoni",
+        "Pork loin",
+        "Pork ribs",
+        "Ribeye steak",
+        "Salmon",
+        "Scallops",
+        "Shrimp",
+        "Trout",
+        "Tuna",
+        "Turkey",
+        "Whole chickens"
+      ],
+      "Veggies": [
+        "Bell peppers",
+        "Broccoli",
+        "Cabbage",
+        "Cauliflower",
+        "Cucumber",
+        "Eggplant",
+        "Garlic",
+        "Green Beans",
+        "Lettuce",
+        "Mushrooms",
+        "Onions",
+        "Radishes",
+        "Spaghetti squash",
+        "Spinach",
+        "Summer squash",
+        "Zucchini"
+      ],
+      "Dairy": [
+        "Butter",
+        "Cream cheese",
+        "Eggs hard cheese(s)",
+        "Heavy cream",
+        "Sour cream"
+      ],
+      "Other": [
+        "Almond butter",
+        "Almond flour",
+        "Beef jerky",
+        "Chicken stock",
+        "Coconut flour",
+        "Hot sauce",
+        "Mustard",
+        "No sugar added sauces",
+        "Nuts, seeds",
+        "Olives",
+        "Pickle juice",
+        "Pork rinds",
+        "Salsa",
+        "Sugar free salad dressings"
+      ],
+      "Fruits": [
+        "Avocados",
+        "Blueberries",
+        "Raspberries",
+        "Strawberries"
+      ],
+      "Fats and Oils": [
+        "Avocado oil",
+        "Coconut oil",
+        "Grape seed oil",
+        "Grass-fed butter",
+        "MCT oil",
+        "Olive oil"
+      ]
+    },
+    "Pescetarian": {
+      "Vegetables": [
+        "Avocados",
+        "Tomatoes",
+        "Sweet potatoes",
+        "Mixed greens",
+        "Spinach",
+        "Broccoli",
+        "Carrots",
+        "Garlic",
+        "Onions",
+        "Red pepper",
+        "Zucchini",
+        "Mushrooms",
+        "Green onions",
+        "Kale",
+        "Swiss chard",
+        "Lemons",
+        "Ginger",
+        "Parsley",
+        "Cilantro"
+      ],
+      "Fish": [
+        "Salmon fillets",
+        "Tilapia fillets",
+        "Haddock fillets",
+        "Salmon in a can",
+        "Tuna in a can",
+        "Sardines in a tin"
+      ],
+      "Other Animal Protein": [
+        "Eggs"
+      ],
+      "Grains": [
+        "Oatmeal",
+        "Quinoa",
+        "Quinoa or rice pasta"
+      ],
+      "Beans, Nuts, and Seeds": [
+        "Black Beans",
+        "Chickpeas",
+        "Lentils",
+        "Almonds",
+        "Brazil Nuts",
+        "Chia Seeds",
+        "Flax Seeds"
+      ],
+      "Dairy": [
+        "Almond milk",
+        "Cashew milk",
+        "Goats cheese",
+        "Goats milk yoghurt"
+      ],
+      "Fruits": [
+        "Mixed berries",
+        "Oranges",
+        "Apples",
+        "Bananas"
+      ],
+      "Cooking and Baking": [
+        "Almond flour",
+        "Tapioca flour",
+        "Vegetable broth",
+        "Nutritional Yeast",
+        "Crushed tomatoes",
+        "Coconut Milk",
+        "Rice Vinegar",
+        "Extra Virgin Olive Oil",
+        "Coconut Oil",
+        "Seasome Oil",
+        "Avocado Oil",
+        "Maple Syrup",
+        "Cacao"
+      ],
+      "Condiments": [
+        "Nut butters",
+        "Mustard",
+        "Apple Cider Vinegar",
+        "Kimchi",
+        "Mayonnaise"
+      ],
+      "Herbs and Spices": [
+        "Tumeric",
+        "Basil",
+        "Curry Spice",
+        "Oregano",
+        "Paprika",
+        "Rosemary",
+        "Thyme",
+        "Cumin",
+        "Chili Powder",
+        "Cinnamon"
+      ]
+    },
+    "Semi-Vegetarianism": {
+      "Vegetables": [
+        "Arugula",
+        "Beet greens",
+        "Bok choy",
+        "Cabbage",
+        "Chard",
+        "Collard greens",
+        "​Kale",
+        "Romaine lettuce",
+        "Spinach",
+        "Watercress",
+        "​Artichoke",
+        "Asparagus",
+        "Beets",
+        "Bell peppers",
+        "Broccoli",
+        "Brussels Sprouts",
+        "Carrots",
+        "Cauliflower",
+        "Celery",
+        "Cherry tomatoes",
+        "Corn",
+        "Cucumber",
+        "Eggplant",
+        "Fennel",
+        "Leeks",
+        "Mushrooms",
+        "Olives",
+        "Onions",
+        "Parsnip",
+        "​Peas",
+        "Potatoes",
+        "Pumpkin",
+        "Radishes",
+        "Radicchio",
+        "Shallots",
+        "Squash",
+        "Sweet potatoes",
+        "Tomatoes",
+        "Turnip",
+        "Zucchini"
+      ],
+      "Fruits": [
+        "Apples",
+        "Apricots",
+        "Avocado",
+        "Bananas",
+        "Cherries",
+        "GrapeFruit",
+        "Grapes",
+        "Kiwis",
+        "Nectarines",
+        "​Oranges",
+        "Peaches",
+        "Plums",
+        "Blackberries",
+        "Blueberries",
+        "Raspberries",
+        "Strawberries",
+        "Green Apples",
+        "Pears",
+        "Pomegranate",
+        "Bags of frozen pitted grapes",
+        "Bags of frozen peaches",
+        "Bags of frozen mixed berries",
+        "Dried mango",
+        "Dried cranberries",
+        "Dried apples",
+        "Dried figs",
+        "Dried coconut pieces",
+        "Dried bananas"
+      ],
+      "Whole Grains, Cereals, and Starches": [
+        "Amaranth",
+        "Barley",
+        "Brown Rice",
+        "Buckwheat",
+        "Bulgur",
+        "Corn, cornflakes",
+        "Farro",
+        "Millet",
+        "Quinoa",
+        "Oats",
+        "Rice cakes",
+        "Rye",
+        "​Spelt",
+        "Steel-cut oats",
+        "Wheat",
+        "Whole grain bread/rolls",
+        "Whole grain flour",
+        "Whole grain pasta",
+        "Wild rice"
+      ],
+      "Refined Grains": [
+        "​Anything made from white flour",
+        "Couscous",
+        "Pasta",
+        "Seitan",
+        "Tortillas",
+        "White bread",
+        "White rice"
+      ],
+      "Legumes": [
+        "Bean sprouts",
+        "Black Beans",
+        "Black-eyed peas",
+        "Cannellini Beans",
+        "Chickpeas",
+        "Edamame",
+        "​Fava Beans",
+        "Green Beans",
+        "Hummus",
+        "Kidney Beans",
+        "Lentils",
+        "Lima Beans",
+        "Navy Beans",
+        "Pinto Beans",
+        "Red Beans",
+        "Snow peas",
+        "Split peas",
+        "Sugar snap peas",
+        "White Beans"
+      ],
+      "Dairy": [
+        "Milk",
+        "Yogurt",
+        "Cottage cheese",
+        "String cheese",
+        "Butter",
+        "Almond milk",
+        "Coconut milk",
+        "Cashew milk",
+        "Hemp milk",
+        "Oat milk",
+        "Rice milk",
+        "Cashew cheese",
+        "Vegan ice cream (almond)",
+        "Vegan sour cream"
+      ],
+      "Healthy Oils and Fats": [
+        "Avocado oil",
+        "Coconut oil",
+        "Olive oil",
+        "Sesame Oil"
+      ],
+      "Nuts and Seeds": [
+        "Almonds",
+        "Brazil nuts",
+        "Cashews",
+        "Chestnuts",
+        "Hazelnuts",
+        "Macadamia nuts",
+        "Pecans",
+        "Pine nuts",
+        "Pistachios",
+        "Walnuts",
+        "Chia seeds",
+        "Flax seeds",
+        "​Hemp seeds",
+        "Pumpkin seeds",
+        "​Sesame seeds",
+        "Sunflower seeds"
+      ],
+      "Butters From Nuts and Seeds": [
+        "Almond butter",
+        "Cashew butter",
+        "​Macadamia nut butter",
+        "Peanut butter",
+        "​Sunflower seed butter",
+        "Tahini"
+      ],
+      "Herbs and Spices": [
+        "Basil",
+        "Bay leaf",
+        "Chili powder",
+        "Chives",
+        "Herbs and Spices",
+        "Coriander",
+        "Cumin",
+        "Curry",
+        "​Dill",
+        "Garlic powder",
+        "Ginger",
+        "Lemongrass",
+        "Nutritional yeast",
+        "Onion powder",
+        "Oregano",
+        "Paprika",
+        "Parsley",
+        "Pepper",
+        "Peppermint",
+        "Red pepper flakes",
+        "Rosemary",
+        "Saffron",
+        "Salt",
+        "Thyme",
+        "Turmeric"
+      ],
+      "Condiments": [
+        "BBQ sauce",
+        "Curry paste",
+        "Hoisin sauce",
+        "Hot sauce",
+        "Ketchup",
+        "Lemon juice",
+        "Miso paste",
+        "​Mustard",
+        "Relish",
+        "Salsa",
+        "Coconut aminos",
+        "Vegan mayo",
+        "Vinegar (Rice, Balsamic, Apple Cider Vinegar, etc.)",
+        "Wasabi"
+      ],
+      "Sweeteners": [
+        "Agave syrup",
+        "Coconut sugar",
+        "Date syrup",
+        "​Maple syrup",
+        "Molasses",
+        "Stevia"
+      ],
+      "Meat Substitutes": [
+        "Burgers",
+        "“Chicken” strips",
+        "Deli slices",
+        "​Hot dogs",
+        "“Meat”balls",
+        "Nuggets",
+        "​Sausages",
+        "Seitan",
+        "Tempeh bacon",
+        "Textured vegetable protein"
+      ]
+    },
+    "AB Blood Type": {
+      "Meat": {
+        "beneficial": [
+          "Lamb",
+          "Mutton",
+          "Rabbit",
+          "Turkey"
+        ],
+        "avoid": [
+          "Beef",
+          "Chicken",
+          "Cornish hen",
+          "Duck",
+          "Goose",
+          "Pork",
+          "Partridge",
+          "Veal",
+          "Venison",
+          "Quail"
+        ],
+        "neutral": []
+      },
+      "Fish / Seafood": {
+        "beneficial": [
+          "Tuna",
+          "Cod",
+          "Grouper",
+          "Hake",
+          "Mackerel",
+          "Mahimahi",
+          "MonkFish",
+          "Ocean perch",
+          "Pike",
+          "Porgy",
+          "Trout",
+          "Red snapper",
+          "SailFish",
+          "Pickerel",
+          "Sardine",
+          "Shad",
+          "Snail",
+          "Sturgeon"
+        ],
+        "avoid": [
+          "Fish / Seafood",
+          "All shellFish",
+          "Crab",
+          "Shrimp",
+          "Lobster",
+          "Mussel",
+          "Oyster",
+          "CrayFish",
+          "Clam",
+          "Etc.",
+          "Anchovy",
+          "Barracuda",
+          "Beluga",
+          "Bluegill bass",
+          "Flounder",
+          "Haddock",
+          "Halibut",
+          "Herring",
+          "Eel",
+          "Frog",
+          "Lox octopus",
+          "Sea bass",
+          "Striped bass",
+          "Turtle",
+          "Yellowtail"
+        ],
+        "neutral": []
+      },
+      "Dairy": {
+        "beneficial": [
+          "Dairy",
+          "Yogurt",
+          "Kefir",
+          "Non-fat sour cream",
+          "Egg",
+          "Mozzarella",
+          "Goat cheese and milk",
+          "Ricotta"
+        ],
+        "avoid": [
+          "Dairy",
+          "American cheese",
+          "Blue cheese",
+          "Brie",
+          "Buttermilk",
+          "Camembert",
+          "Ice cream",
+          "Parmesan",
+          "Provolone",
+          "Sherbet",
+          "Whole milk"
+        ],
+        "neutral": []
+      },
+      "Fat": {
+        "beneficial": [
+          "Fat",
+          "Olive oil (use sparingly)"
+        ],
+        "avoid": [
+          "Fat",
+          "Corn oil",
+          "Cottonseed oil",
+          "Safflower oil",
+          "Sesame oil",
+          "Sunflower oil"
+        ],
+        "neutral": []
+      },
+      "Nut": {
+        "beneficial": [
+          "Nut",
+          "Peanut",
+          "Walnut"
+        ],
+        "avoid": [
+          "Nut",
+          "Filbert",
+          "Poppy seed",
+          "Pumpkin seed",
+          "Sesame seed",
+          "Sunflower seed"
+        ],
+        "neutral": []
+      },
+      "Bean": {
+        "beneficial": [
+          "Bean",
+          "Lentil",
+          "Navy bean",
+          "Pinto bean",
+          "Red bean",
+          "Soy bean"
+        ],
+        "avoid": [
+          "Bean",
+          "Kidney bean",
+          "Lima bean",
+          "Aduke bean",
+          "Azuki bean",
+          "Black bean",
+          "Fava bean",
+          "Garbanzo",
+          "Black-eyed pea"
+        ],
+        "neutral": []
+      },
+      "Grain": {
+        "beneficial": [
+          "Grain",
+          "Millet",
+          "Oat bran",
+          "Oatmeal",
+          "Rice bran",
+          "Puffed rice",
+          "Rye spelt",
+          "Sprouted wheat",
+          "All kinds of rice and any products such as flour",
+          "Bread and noodles made with these Grains"
+        ],
+        "avoid": [
+          "Grain",
+          "Buckwheat",
+          "Corn (any products such as flour, bread and noodles made with these)",
+          "Kamut",
+          "Kasha",
+          "Soba noodles",
+          "Artichoke pasta"
+        ],
+        "neutral": []
+      },
+      "Vegetable": {
+        "beneficial": [
+          "Vegetable",
+          "Broccoli",
+          "Beet",
+          "Cauliflower",
+          "Celery",
+          "Green leafy vegs",
+          "Cucumber",
+          "Eggplant",
+          "Garlic",
+          "Maitake",
+          "Mushroom",
+          "Parsley",
+          "Parsnip",
+          "Sweet potato",
+          "Alfalfa sprout",
+          "Tempeh",
+          "Tofu",
+          "All types of yams"
+        ],
+        "avoid": [
+          "Vegetable",
+          "Artichoke",
+          "Avocado",
+          "Black olive",
+          "All kinds of bell pepper",
+          "Radish",
+          "Mung bean sprout",
+          "Radish sprout"
+        ],
+        "neutral": []
+      },
+      "Fruit": {
+        "beneficial": [
+          "Fruit",
+          "All kinds of grapes and plums",
+          "Cranberry",
+          "Gooseberry",
+          "Loganberry",
+          "Cherry",
+          "Pineapple",
+          "GrapeFruit",
+          "Lemon",
+          "Kiwi"
+        ],
+        "avoid": [
+          "Fruit",
+          "Mango",
+          "Guava",
+          "Coconut",
+          "Banana",
+          "Orange"
+        ],
+        "neutral": []
+      },
+      "Spice/Additive": {
+        "beneficial": [
+          "Spice / Additive",
+          "Kelp",
+          "Miso",
+          "Curry",
+          "Garlic",
+          "Horseradish",
+          "Parsley"
+        ],
+        "avoid": [
+          "Spice/Additive",
+          "Allspice",
+          "Almond extract",
+          "Anise",
+          "Barley malt",
+          "Caper",
+          "Cornstarch",
+          "Corn syrup",
+          "Gelatin",
+          "Tapioca",
+          "Vinegar",
+          "White pepper",
+          "Black pepper",
+          "Cayenne pepper",
+          "Red pepper flake"
+        ],
+        "neutral": []
+      },
+      "Beverage": {
+        "beneficial": [
+          "Alfalfa",
+          "Chamomile",
+          "Echinacea",
+          "Dandelion",
+          "Burdock root",
+          "Strawberry leaf",
+          "Green tea (alt day use)",
+          "Hawthron",
+          "Licorice",
+          "Red wine (1 glass/day)",
+          "Coffee or decaf coffee (1 cup/day)"
+        ],
+        "avoid": [
+          "Distilled liquor",
+          "Soda",
+          "Black tea"
+        ],
+        "neutral": []
+      }
+    },
+    "A Blood Type": {
+      "Meat": {
+        "beneficial": [
+          "Chicken",
+          "Cornish hen",
+          "Turkey"
+        ],
+        "avoid": [
+          "Beef",
+          "Pork",
+          "Lamb",
+          "Veal",
+          "Venision",
+          "Duck",
+          "Goose"
+        ],
+        "neutral": []
+      },
+      "Fish / Seafood": {
+        "beneficial": [
+          "Carp",
+          "Cod",
+          "Grouper",
+          "Mackerel",
+          "MonkFish",
+          "Pickerel",
+          "Red Snapper",
+          "Rainbow trout",
+          "Salmon",
+          "Sardine",
+          "Sea trout",
+          "Silver Perch",
+          "Snail",
+          "WhiteFish",
+          "Yellow perch"
+        ],
+        "avoid": [
+          "Anchovy",
+          "Barracuda",
+          "Beluga",
+          "BlueFish",
+          "Bluegill bass",
+          "CatFish",
+          "Caviar",
+          "Clam",
+          "Conch",
+          "Crab",
+          "CrayFish",
+          "Eel",
+          "Flounder",
+          "Frog",
+          "Gray sole",
+          "Haddock",
+          "Hake",
+          "Halibut",
+          "Herring",
+          "Lobster",
+          "Lox",
+          "Mussels",
+          "Octopus",
+          "Oysters",
+          "Scallop",
+          "Shad",
+          "Shrimp",
+          "Sole",
+          "Squid",
+          "Striped bass",
+          "TileFish",
+          "Turtle"
+        ],
+        "neutral": []
+      },
+      "Dairy": {
+        "beneficial": [
+          "Yogurt",
+          "Mozzarella",
+          "Feta",
+          "Goat cheese",
+          "Goat milk",
+          "Kefir",
+          "Ricotta",
+          "String cheese"
+        ],
+        "avoid": [
+          "All other cheeses and milk"
+        ],
+        "neutral": []
+      },
+      "Fat": {
+        "beneficial": [
+          "Flaxseed oil",
+          "Olive oil",
+          "Canola Oil",
+          "Cod liver oil"
+        ],
+        "avoid": [
+          "Corn oil",
+          "Cottonseed",
+          "Peanut oil",
+          "Safflower",
+          "Seasome Oil"
+        ],
+        "neutral": []
+      },
+      "Nut": {
+        "beneficial": [
+          "Peanut",
+          "Pumpkin seed",
+          "Walnut"
+        ],
+        "avoid": [
+          "Brazil nut",
+          "Cashew",
+          "Pistachios"
+        ],
+        "neutral": []
+      },
+      "Bean": {
+        "beneficial": [
+          "Aduke bean",
+          "Azuki bean",
+          "Black bean",
+          "Green bean",
+          "Pinto bean",
+          "Red soy bean",
+          "Lentil",
+          "Black-eyed pea"
+        ],
+        "avoid": [
+          "Copper bean",
+          "Garbanzo",
+          "Kidney bean",
+          "Lima Bean",
+          "Navy bean",
+          "Red bean",
+          "Tamrind"
+        ],
+        "neutral": []
+      },
+      "Grain": {
+        "beneficial": [
+          "Amaranth",
+          "Buckwheat",
+          "Essene bread",
+          "Ezekiel bread",
+          "Soya flour bread",
+          "Sprouted wheat bread",
+          "Rice cake",
+          "Flour (oat, rice, rye)",
+          "Soba noodle",
+          "Artichoke pasta"
+        ],
+        "avoid": [
+          "Cream of wheat",
+          "Familia",
+          "Farina",
+          "Grano grape nuts",
+          "Wheat germ",
+          "Seven grain",
+          "Shredded wheat",
+          "Wheat bran",
+          "Durum wheat",
+          "English muffin",
+          "High-protein whole wheat bread",
+          "Multi-grain bread",
+          "Matzo",
+          "Pumpernickel",
+          "Wheat bran muffin",
+          "Flour (white, whole, wheat)",
+          "Semolina",
+          "Spinach pasta"
+        ],
+        "neutral": []
+      },
+      "Vegetable": {
+        "beneficial": [
+          "Garlic",
+          "Onion",
+          "Broccoli",
+          "Carrot",
+          "Collard greens",
+          "Kale",
+          "Pumpkin",
+          "Spinach",
+          "Artichoke",
+          "Chicory",
+          "Greens (Dandelion, swiss chard)",
+          "Horseradish",
+          "Leek",
+          "Romaine",
+          "Okra",
+          "Parsley",
+          "Alfalfa sprout",
+          "Tempeh",
+          "Tofu",
+          "Turnip"
+        ],
+        "avoid": [
+          "Pepper",
+          "Olive",
+          "Potato",
+          "Sweet Potato",
+          "Yams",
+          "All kinds of cabbage",
+          "Tomato",
+          "Egglplant",
+          "Mushroom",
+          "Rhubarb"
+        ],
+        "neutral": []
+      },
+      "Fruit": {
+        "beneficial": [
+          "Berries",
+          "Plum",
+          "Prune",
+          "Fig",
+          "Pineapple",
+          "Cherry",
+          "Apricot",
+          "GrapeFruit",
+          "Lemon"
+        ],
+        "avoid": [
+          "Melon",
+          "Cataloupe",
+          "Honeydew",
+          "Mango",
+          "Papaya",
+          "Banana",
+          "Coconut",
+          "Orange",
+          "Tangerine"
+        ],
+        "neutral": []
+      },
+      "Spice/Additive/Condiment": {
+        "beneficial": [
+          "Tamari",
+          "Miso",
+          "Soy sauce",
+          "Garlic",
+          "Ginger",
+          "Blackstrap",
+          "Molasses"
+        ],
+        "avoid": [
+          "Vinegar",
+          "Black pepper",
+          "Cayenee pepper",
+          "White pepper",
+          "Caper",
+          "Plain gelatin",
+          "Wintergreen",
+          "Ketchup",
+          "Mayonnaise",
+          "Pickle",
+          "Relish",
+          "Worcestershire sauce"
+        ],
+        "neutral": []
+      },
+      "Beverage": {
+        "beneficial": [
+          "Hawthorne",
+          "Aloe",
+          "Alfalfa",
+          "Burdock",
+          "Echinacea",
+          "Green teas",
+          "Red wine (1 glass/day)",
+          "Ginger",
+          "Slippery elm"
+        ],
+        "avoid": [
+          "Beer",
+          "Distilled liquor",
+          "Seltzer water",
+          "Soda",
+          "Black tea"
+        ],
+        "neutral": []
+      }
+    },
+    "B Blood Type": {
+      "Meat": {
+        "beneficial": [
+          "Lamb",
+          "Mutton",
+          "Venison",
+          "Rabbit",
+          "Beef",
+          "Pheasant",
+          "Turkey",
+          "Veal"
+        ],
+        "avoid": [
+          "Chicken",
+          "Cornish hen",
+          "Duck",
+          "Goose",
+          "Partridge",
+          "Quail",
+          "Pork"
+        ],
+        "neutral": []
+      },
+      "Fish / Seafood": {
+        "beneficial": [
+          "Cod",
+          "Salmon",
+          "Flounder",
+          "Halibut",
+          "Sole",
+          "Trout"
+        ],
+        "avoid": [
+          "Anchovy",
+          "All shellFish",
+          "Crab",
+          "Shrimp",
+          "Lobster",
+          "Mussel",
+          "Oyster",
+          "CrayFish",
+          "Clam",
+          "Etc.",
+          "Barracuda",
+          "Beluga",
+          "Eel",
+          "Frog",
+          "Lox octopus",
+          "Sea bass",
+          "Striped bass",
+          "Turtle",
+          "Yellowtail"
+        ],
+        "neutral": []
+      },
+      "Dairy": {
+        "beneficial": [
+          "Cottage cheese",
+          "Farmer",
+          "Feta",
+          "Goat cheese and milk",
+          "Kefir",
+          "Mozzarella",
+          "Ricotta",
+          "Milk",
+          "Yogurt"
+        ],
+        "avoid": [
+          "American cheese",
+          "Blue cheese",
+          "Ice cream",
+          "String cheese"
+        ],
+        "neutral": []
+      },
+      "Fat": {
+        "beneficial": [
+          "Olive Oil",
+          "Corn oil",
+          "Cottonseed oil",
+          "Peanut oil",
+          "Safflower oil",
+          "Sesame oil",
+          "Sunflower oil"
+        ],
+        "avoid": [
+          "Canola oil"
+        ],
+        "neutral": []
+      },
+      "Nut": {
+        "beneficial": [
+          "Walnut"
+        ],
+        "avoid": [
+          "Cashew",
+          "Filbert",
+          "Pine nut",
+          "Pistachio",
+          "Peanut",
+          "Pumpkin seed",
+          "Sesame seed",
+          "Sunflower seed"
+        ],
+        "neutral": []
+      },
+      "Grain": {
+        "beneficial": [
+          "Millet",
+          "Oatmeal (bran, flour)",
+          "Puffed rice",
+          "Rice (bran, flour)",
+          "Spelt",
+          "Brown rice bread",
+          "Essene bread",
+          "Ezekiel bread",
+          "Wasa bread",
+          "Fin crips"
+        ],
+        "avoid": [
+          "Wheat (bran, germ, bulgur, durum, whole and white)",
+          "Shredded wheat",
+          "Rye",
+          "Buckwheat",
+          "Corn",
+          "Amaranth",
+          "Barley",
+          "Kasha",
+          "Seven-grain",
+          "Wild rice",
+          "Couscous",
+          "Products such as flour",
+          "Bread and noodles made with these grain products"
+        ],
+        "neutral": []
+      },
+      "Vegetable": {
+        "beneficial": [
+          "Green leafy Vegetables"
+        ],
+        "avoid": [
+          "Tomato",
+          "Olive",
+          "Artichoke",
+          "Avacado",
+          "Pumpkin",
+          "Radish",
+          "Sprouts",
+          "Tempeh",
+          "Tofu",
+          "Rhubarb"
+        ],
+        "neutral": []
+      },
+      "Fruit": {
+        "beneficial": [
+          "Pineapple",
+          "Banana",
+          "Cranberry",
+          "Grape",
+          "Papaya"
+        ],
+        "avoid": [
+          "Cocunut",
+          "Persimmon",
+          "Pomergrante",
+          "Prickly pear",
+          "StarFruit"
+        ],
+        "neutral": []
+      },
+      "Spice/Additive/Condiment": {
+        "beneficial": [
+          "Ginger",
+          "Horseradish",
+          "Curry",
+          "Cayenne eppper"
+        ],
+        "avoid": [
+          "Barley malt sweetener",
+          "Corn syrup",
+          "Cornstarch",
+          "Cinnamon",
+          "Allspice",
+          "Almond extract",
+          "Gelatin",
+          "Pepper",
+          "Ketuchup"
+        ],
+        "neutral": []
+      },
+      "Beverage": {
+        "beneficial": [
+          "Ginger",
+          "Peppermint",
+          "Raspberry leaf",
+          "Rose hip",
+          "Sage",
+          "Green teas",
+          "Ginseng",
+          "Licorice"
+        ],
+        "avoid": [
+          "Aloe",
+          "Coltsfoot",
+          "Corn silk",
+          "Fenugreek",
+          "Gentian",
+          "Goldenseal",
+          "Hops",
+          "Linden",
+          "Mullein",
+          "Red clover",
+          "Rhubarb",
+          "Senna",
+          "Shepherd's purse",
+          "Skullcap",
+          "Distilled liquor",
+          "Seltzer water",
+          "Soda"
+        ],
+        "neutral": []
+      }
+    },
+    "O Blood Type": {
+      "Meat": {
+        "beneficial": [
+          "Beef",
+          "Lamb",
+          "Mutton",
+          "Veal",
+          "Venison"
+        ],
+        "avoid": [
+          "Bacon",
+          "Ham",
+          "Goose",
+          "Pork"
+        ],
+        "neutral": []
+      },
+      "Fish / Seafood": {
+        "beneficial": [
+          "Cod",
+          "Herring",
+          "Mackerel"
+        ],
+        "avoid": [
+          "Barracuda",
+          "Pickled herring",
+          "CatFish",
+          "Smoked salmon",
+          "Caviar",
+          "Octopus",
+          "Conch"
+        ],
+        "neutral": []
+      },
+      "Dairy": {
+        "beneficial": [
+          "Butter",
+          "Feta",
+          "Mozzarella",
+          "Goat cheese",
+          "Soy milk"
+        ],
+        "avoid": [
+          "All other dairy products and yogurts"
+        ],
+        "neutral": []
+      },
+      "Fat": {
+        "beneficial": [
+          "Olive Oil",
+          "flaxseed oil",
+          "Canola oil",
+          "Sesame oil"
+        ],
+        "avoid": [
+          "Corn oil",
+          "Peanut oil",
+          "Cottonseed oil",
+          "Safflower oil"
+        ],
+        "neutral": []
+      },
+      "Nut": {
+        "beneficial": [
+          "Pumpkin seed",
+          "Walnut"
+        ],
+        "avoid": [
+          "Brazil nut",
+          "Cashew",
+          "Peanut",
+          "Pistacios",
+          "Poppy Seed"
+        ],
+        "neutral": []
+      },
+      "Bean": {
+        "beneficial": [
+          "Aduke bean",
+          "Azuki bean",
+          "Black-eyed pea"
+        ],
+        "avoid": [
+          "Copper bean",
+          "Kidney bean",
+          "Navy bean",
+          "Tamerind",
+          "Green lentil",
+          "Red lentil",
+          "Pinto bean"
+        ],
+        "neutral": []
+      },
+      "Grain": {
+        "beneficial": [
+          "Essene bread",
+          "Ezekiel bread",
+          "Amaranth",
+          "Barley",
+          "Buckwheat",
+          "Rice",
+          "Kamut",
+          "Kasha",
+          "Milelt",
+          "Rye",
+          "Spelt"
+        ],
+        "avoid": [
+          "Corn",
+          "Gluten",
+          "Graham",
+          "Wheat",
+          "Farina",
+          "Oat",
+          "Seven-Grains",
+          "Any products such as flour",
+          "Bread and noodles made with these Grains products"
+        ],
+        "neutral": []
+      },
+      "Vegetable": {
+        "beneficial": [
+          "Kale",
+          "Collard greens",
+          "Romaine Lettuce",
+          "Broccoli",
+          "Spinach",
+          "Artichoke",
+          "Chicory",
+          "Dandelion",
+          "Garlic",
+          "Horseradish",
+          "Okra",
+          "Onions",
+          "Parsley",
+          "Parsnips",
+          "Red peppers",
+          "Sweet potato",
+          "Pumpkin",
+          "Seaweed",
+          "Turnip"
+        ],
+        "avoid": [
+          "Cabbage",
+          "Brussel sprout",
+          "Cauliflower",
+          "Mustard greens",
+          "Alfalfa sprout",
+          "Shiitake mushroom",
+          "Fermented olive",
+          "Eggplant",
+          "Potato",
+          "avocado",
+          "Rhubarb",
+          "Leek"
+        ],
+        "neutral": []
+      },
+      "Fruit": {
+        "beneficial": [
+          "Plum",
+          "Prune",
+          "Fig"
+        ],
+        "avoid": [
+          "Melon",
+          "Cantaloupe",
+          "Honeydew",
+          "Orange",
+          "Tangerine",
+          "Strawberry",
+          "Blackberry",
+          "Coconut"
+        ],
+        "neutral": []
+      },
+      "Spice/Additive/Condiment": {
+        "beneficial": [
+          "Kelp-based seasonings",
+          "iodized salt",
+          "Parsley",
+          "Curry",
+          "Cayenne pepper",
+          "Chocoalte",
+          "Honey",
+          "Cocoa"
+        ],
+        "avoid": [
+          "White Pepper",
+          "Black pepper",
+          "Vinegar",
+          "Capers",
+          "Cinnamon",
+          "Cornstarch",
+          "Corn syrup",
+          "Nutmeg",
+          "Vanilla",
+          "Kethcup",
+          "Pickle",
+          "Mayonnaise",
+          "Relish"
+        ],
+        "neutral": []
+      },
+      "Beverage": {
+        "beneficial": [
+          "Seltzer water",
+          "Club soda",
+          "Tea",
+          "Wine"
+        ],
+        "avoid": [
+          "Beer",
+          "Coffee",
+          "Distilled liquor",
+          "Black tea"
+        ],
+        "neutral": []
+      }
+    }
+  }
+}

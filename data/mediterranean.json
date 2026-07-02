@@ -1,0 +1,59 @@
+{
+  "id": "mediterranean",
+  "name": "Mediterranean Diet",
+  "type": "category-list",
+  "categories": {
+    "Beans": [
+      "Black Beans",
+      "Chickpeas (Garbanzo)",
+      "Hummus",
+      "Lentils",
+      "Pinto Beans",
+      "White Beans (Cannellini)"
+    ],
+    "Nuts and Seeds": [
+      "Almonds",
+      "Cashews",
+      "Flax",
+      "Peanuts",
+      "Pine nuts",
+      "Pumpkin seeds",
+      "Sunflower seeds",
+      "Walnuts"
+    ],
+    "Healthy Oils and Fats": [
+      "Avocado oil",
+      "Canola oil",
+      "Extra-virgin olive oil",
+      "Grape seed oil"
+    ],
+    "Grains": [
+      "Barley",
+      "Bread (e.g. loaf, pita)",
+      "Bulgur",
+      "Couscous",
+      "Oatmeal",
+      "Pasta",
+      "Polenta",
+      "Quinoa",
+      "Rice"
+    ],
+    "Seafood": [
+      "Clams",
+      "Cod",
+      "Crab",
+      "Salmon",
+      "Scallops",
+      "Shrimp",
+      "Tilapia",
+      "Tuna"
+    ],
+    "Dairy / Eggs": [
+      "Cheese",
+      "Eggs",
+      "Low-fat milk",
+      "Plain or Greek yogurt"
+    ]
+  },
+  "foodCount": 39
+}

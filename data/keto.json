@@ -1,0 +1,88 @@
+{
+  "id": "keto",
+  "name": "Keto",
+  "type": "category-list",
+  "categories": {
+    "Meat": [
+      "Bacon",
+      "Bone broth",
+      "Breakfast sausage",
+      "Chicken breasts",
+      "Chicken legs",
+      "Chicken thighs",
+      "Chuck roast",
+      "Duck",
+      "Fish",
+      "Ground beef",
+      "Lobster",
+      "Luncheon meats",
+      "Pepperoni",
+      "Pork loin",
+      "Pork ribs",
+      "Ribeye steak",
+      "Salmon",
+      "Scallops",
+      "Shrimp",
+      "Trout",
+      "Tuna",
+      "Turkey",
+      "Whole chickens"
+    ],
+    "Veggies": [
+      "Bell peppers",
+      "Broccoli",
+      "Cabbage",
+      "Cauliflower",
+      "Cucumber",
+      "Eggplant",
+      "Garlic",
+      "Green Beans",
+      "Lettuce",
+      "Mushrooms",
+      "Onions",
+      "Radishes",
+      "Spaghetti squash",
+      "Spinach",
+      "Summer squash",
+      "Zucchini"
+    ],
+    "Dairy": [
+      "Butter",
+      "Cream cheese",
+      "Eggs hard cheese(s)",
+      "Heavy cream",
+      "Sour cream"
+    ],
+    "Other": [
+      "Almond butter",
+      "Almond flour",
+      "Beef jerky",
+      "Chicken stock",
+      "Coconut flour",
+      "Hot sauce",
+      "Mustard",
+      "No sugar added sauces",
+      "Nuts, seeds",
+      "Olives",
+      "Pickle juice",
+      "Pork rinds",
+      "Salsa",
+      "Sugar free salad dressings"
+    ],
+    "Fruits": [
+      "Avocados",
+      "Blueberries",
+      "Raspberries",
+      "Strawberries"
+    ],
+    "Fats and Oils": [
+      "Avocado oil",
+      "Coconut oil",
+      "Grape seed oil",
+      "Grass-fed butter",
+      "MCT oil",
+      "Olive oil"
+    ]
+  },
+  "foodCount": 68
+}

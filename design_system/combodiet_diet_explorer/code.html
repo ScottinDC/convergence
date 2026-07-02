@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ComboDiet Explorer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbcc",
+                        "inverse-surface": "#30312e",
+                        "outline-variant": "#c3c8bf",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#424942",
+                        "secondary-fixed-dim": "#c1c8c0",
+                        "on-surface": "#1b1c19",
+                        "primary": "#47614a",
+                        "tertiary-fixed-dim": "#e8beac",
+                        "primary-container": "#5f7a61",
+                        "surface": "#fbf9f4",
+                        "on-secondary-container": "#5d645d",
+                        "inverse-primary": "#b1ceb1",
+                        "surface-variant": "#e4e2dd",
+                        "inverse-on-surface": "#f2f1ec",
+                        "outline": "#737971",
+                        "on-background": "#1b1c19",
+                        "on-surface-variant": "#434842",
+                        "surface-container-high": "#eae8e3",
+                        "surface-bright": "#fbf9f4",
+                        "on-tertiary-container": "#fffaf8",
+                        "on-primary-container": "#efffec",
+                        "secondary-fixed": "#dde4db",
+                        "surface-container-highest": "#e4e2dd",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#334d36",
+                        "surface-dim": "#dbdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4032",
+                        "secondary-container": "#dbe2d9",
+                        "surface-tint": "#4a654d",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2c160b",
+                        "tertiary-container": "#8e6c5c",
+                        "surface-container-low": "#f5f3ee",
+                        "tertiary": "#745445",
+                        "background": "#fbf9f4",
+                        "surface-container": "#f0eee9",
+                        "on-primary-fixed": "#07200e",
+                        "secondary": "#596059",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#cceacc",
+                        "primary-fixed-dim": "#b1ceb1",
+                        "on-secondary-fixed": "#171d18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "48px",
+                        "gutter": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "title-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f4;
+            color: #1b1c19;
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .diet-chip {
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-32">
+<!-- TopAppBar component mapping -->
+<header class="w-full top-0 sticky z-50 shadow-sm dark:shadow-none bg-surface dark:bg-surface-dim">
+<div class="flex items-center justify-between px-md h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-3 cursor-pointer active:scale-95 duration-150 transition-transform">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">menu</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">ComboDiet</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity active:scale-95 duration-150">search</button>
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden active:scale-95 duration-150 transition-transform cursor-pointer">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGSpAekL-dz8DOMf8m4GDuW5IHM5WQJAFQBzgKSEjhU3pNUCl3YnVs0ilYIIqiMpNWEfWVP3L3CjyTaQvuuzkgLyas-NwZIVKcCLwt_bOeBdKd2i7RImFEib6xLGgRu6xxjRzjk7AJ0AF8pWbxXkmhv8ptBajCLW8zU1EkCLmYbT5mgkFb2MJP6kUgOh8v_6copKBl35vmEGdYWpXiq0y5P22mKrpD2ebpbx_aQikaL07MNxShCHCuwZk8CEKVTGQVIkDyhMKyc3o"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-gutter mt-8">
+<!-- Hero Section -->
+<section class="mb-xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-md tracking-tight">Diet Explorer</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Nurture your body with scientifically-informed nutritional frameworks. Discover the philosophy that resonates with your unique biology.
+        </p>
+</section>
+<!-- Advanced Toggle -->
+<section class="mb-lg p-lg bg-secondary-container rounded-lg flex flex-col md:flex-row items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider">ADVANCED MODE: COMBINE RULES</h3>
+<p class="text-sm text-on-secondary-container opacity-80">Layer Food Combining principles over your selected diet for optimal digestion.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-14 h-7 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</section>
+<!-- Bento Grid Layout -->
+<div class="bento-grid">
+<!-- Mediterranean Card (Featured) -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low border border-outline/10 hover:shadow-lg transition-all duration-500">
+<div class="h-[400px] relative overflow-hidden">
+<img alt="Mediterranean Table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqyfUtG1Dg73_yBNIHRLXj6bODlGfkBPQCx31dmWRRsHRlBeTJ2co3qLU-DVMd8V8hkvDs3bBLaKIDxXXkAJ0_gflt_inKOCk9kpg99qrmHSPp-zJEkXd0glg-4dpCjL4PaI4ZEBDuwF_aqkt35-B-QQAPwC5uWq6mI-pN2WvfBIB_nYfxCgpNKpz9gzGHezd8DYbvqLvY9EbAUQFs6Lv2SdRZ36rFwyQKSXlV44_7Tt92JH9szKrSYJtB4hl_QV2LgWy3B4bXC18"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Most Sustainable</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-2">Mediterranean</h2>
+<p class="font-body-md text-body-md opacity-90 max-w-lg">Focus on heart-healthy fats, plant-based foods, and the joyful ritual of eating.</p>
+</div>
+</div>
+<div class="p-lg flex justify-between items-center bg-surface-container-lowest/80 backdrop-blur-md">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md hover:bg-primary/90 active:scale-95 transition-all">Set as Goal</button>
+<button class="text-primary font-label-md flex items-center gap-2 hover:underline group/link">
+                    Learn More <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Keto Card -->
+<div class="col-span-12 md:col-span-4 bg-surface-container rounded-xl p-8 border border-outline/10 flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-14 h-14 bg-surface-container-lowest rounded-xl flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-3">Ketogenic</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">High-fat, low-carb metabolic therapy designed to transition your body into fat-burning ketosis.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-[10px] font-bold text-primary uppercase tracking-wider">Fat-burning</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-[10px] font-bold text-primary uppercase tracking-wider">Metabolic</span>
+</div>
+</div>
+<button class="mt-xl border border-primary text-primary w-full py-3 rounded-full font-label-md hover:bg-primary hover:text-white transition-colors">Set as Goal</button>
+</div>
+<!-- DASH Card -->
+<div class="col-span-12 md:col-span-5 bg-surface-container-high rounded-xl p-8 border border-outline/10 flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex-1">
+<h2 class="font-headline-md text-headline-md text-primary mb-3">DASH Diet</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-md">Dietary Approaches to Stop Hypertension. Rich in potassium, calcium, and magnesium to support blood pressure.</p>
+<div class="aspect-video rounded-lg overflow-hidden mb-4">
+<img alt="Fresh Vegetables" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrmmGDT1DHHa6L5VxV8V3w2TkjkFaC1kXo_BXB9_hAjNbViIWrWBVN7wxEYTaVNoLQ2JxuEGVDanLRzTVSMcXiLqNInqxi1AoOtPQACKKnas86Y-vyQvkF0q0keZdviouMQkO3cfe_xUVGaf_Nn7GFj-T4-FfjHYwVTmu6fhj3tiiLFzP0PUjUlJXq2QOG3avelGCDqMkw-5sSGtSnXTkdwu_sdquJPXuDiTB4YzosKzVqqtrc03IwRfCQOAcARi0mN23czuQ5qBg"/>
+</div>
+</div>
+<button class="border border-primary text-primary w-full py-3 rounded-full font-label-md hover:bg-primary hover:text-white transition-colors">Explore DASH</button>
+</div>
+<!-- Plant-Based Card -->
+<div class="col-span-12 md:col-span-7 bg-primary rounded-xl p-1 text-on-primary group overflow-hidden relative">
+<div class="p-8 h-full flex flex-col justify-between relative z-10">
+<div class="max-w-md">
+<span class="material-symbols-outlined text-4xl mb-4">eco</span>
+<h2 class="font-headline-lg text-headline-lg mb-3">Plant-Based</h2>
+<p class="font-body-md text-body-md opacity-80 leading-relaxed mb-6">Emphasize whole, minimally processed plant foods while limiting animal products for longevity and planetary health.</p>
+<div class="space-y-3 mb-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md">Optimizes fiber intake</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md">Rich in phytonutrients</span>
+</div>
+</div>
+</div>
+<button class="bg-primary-fixed text-primary-fixed-dim px-8 py-3 rounded-full font-label-md w-fit active:scale-95 transition-transform">Select Diet</button>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Food Combining (Current) -->
+<div class="col-span-12 bg-surface-container-lowest rounded-xl p-8 border border-dashed border-primary/30 flex flex-col md:flex-row items-center gap-8">
+<div class="flex-shrink-0 w-24 h-24 rounded-full bg-secondary-fixed flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-primary text-4xl">sync</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-center gap-3 mb-2 justify-center md:justify-start">
+<h3 class="font-headline-md text-headline-md text-primary">Food Combining</h3>
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase w-fit mx-auto md:mx-0">Current Default</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Our proprietary baseline. Optimizes digestion by separating conflicting macro groups. Can be layered on any other framework.</p>
+</div>
+<button class="text-primary font-label-md border-b-2 border-primary/20 pb-1 hover:border-primary transition-all">Configure Rules</button>
+</div>
+</div>
+<!-- Quote Section -->
+<section class="mt-xl mb-xl text-center max-w-3xl mx-auto opacity-80">
+<p class="font-body-lg text-body-lg text-primary italic leading-relaxed">
+            "The food you eat can be either the safest and most powerful form of medicine or the slowest form of poison."
+        </p>
+<p class="font-label-md text-label-md mt-4 uppercase tracking-widest text-primary font-bold">— Ann Wigmore</p>
+</section>
+</main>
+<!-- BottomNavBar component mapping -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface dark:bg-surface-container shadow-[0_-4px_20px_rgba(71,97,74,0.04)] md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-md text-label-md">Explorer</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">Guides</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label-md text-label-md">Records</span>
+</a>
+</nav>
+<!-- Desktop Nav Hint -->
+<div class="hidden md:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col gap-8 z-40">
+<div class="group relative flex items-center">
+<div class="w-2 h-2 rounded-full bg-outline-variant transition-all group-hover:scale-150 group-hover:bg-primary"></div>
+<span class="absolute left-6 font-label-md text-primary opacity-0 group-hover:opacity-100 transition-all">Home</span>
+</div>
+<div class="group relative flex items-center">
+<div class="w-3 h-3 rounded-full bg-primary transition-all"></div>
+<span class="absolute left-6 font-label-md text-primary">Explorer</span>
+</div>
+<div class="group relative flex items-center">
+<div class="w-2 h-2 rounded-full bg-outline-variant transition-all group-hover:scale-150 group-hover:bg-primary"></div>
+<span class="absolute left-6 font-label-md text-primary opacity-0 group-hover:opacity-100 transition-all">Planner</span>
+</div>
+</div>
+<script>
+    // Simple micro-interactions
+    document.querySelectorAll('.active\\:scale-95').forEach(button => {
+        button.addEventListener('mousedown', () => button.style.transform = 'scale(0.95)');
+        button.addEventListener('mouseup', () => button.style.transform = 'scale(1)');
+        button.addEventListener('mouseleave', () => button.style.transform = 'scale(1)');
+    });
+</script>
+</body></html>

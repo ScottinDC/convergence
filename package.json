@@ -1,0 +1,25 @@
+{
+  "name": "convergence-health-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ComboDiet — a small web app for organizing symptom overlap and diet discussion notes across multiple conditions.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check app.js && node --check nutrition-engine.js && node --check scripts/export-spreadsheet.js",
+    "export-data": "node scripts/export-spreadsheet.js && node scripts/parse-spreadsheet.mjs",
+    "test:e2e": "playwright test",
+    "test": "npm run check && npm run test:e2e",
+    "checkmate:status": "checkmate status combodiet-e2e",
+    "checkmate:affected": "checkmate affected --json > .cursor/cm_list.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "checkmateai": "^0.1.6",
+    "xlsx": "^0.18.5"
+  }
+}

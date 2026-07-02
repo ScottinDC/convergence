@@ -1,0 +1,230 @@
+{
+  "id": "bloodTypeO",
+  "name": "O Blood Type",
+  "type": "blood-type",
+  "categories": {
+    "Meat": {
+      "beneficial": [
+        "Beef",
+        "Lamb",
+        "Mutton",
+        "Veal",
+        "Venison"
+      ],
+      "avoid": [
+        "Bacon",
+        "Goose",
+        "Ham",
+        "Pork"
+      ],
+      "neutral": []
+    },
+    "Fish / Seafood": {
+      "beneficial": [
+        "Cod",
+        "Herring",
+        "Mackerel"
+      ],
+      "avoid": [
+        "Barracuda",
+        "CatFish",
+        "Caviar",
+        "Conch",
+        "Octopus",
+        "Pickled herring",
+        "Smoked salmon"
+      ],
+      "neutral": []
+    },
+    "Dairy": {
+      "beneficial": [
+        "Butter",
+        "Feta",
+        "Goat cheese",
+        "Mozzarella",
+        "Soy milk"
+      ],
+      "avoid": [
+        "All other dairy products and yogurts"
+      ],
+      "neutral": []
+    },
+    "Fat": {
+      "beneficial": [
+        "Canola oil",
+        "flaxseed oil",
+        "Olive Oil",
+        "Sesame oil"
+      ],
+      "avoid": [
+        "Corn oil",
+        "Cottonseed oil",
+        "Peanut oil",
+        "Safflower oil"
+      ],
+      "neutral": []
+    },
+    "Nut": {
+      "beneficial": [
+        "Pumpkin seed",
+        "Walnut"
+      ],
+      "avoid": [
+        "Brazil nut",
+        "Cashew",
+        "Peanut",
+        "Pistacios",
+        "Poppy Seed"
+      ],
+      "neutral": []
+    },
+    "Bean": {
+      "beneficial": [
+        "Aduke bean",
+        "Azuki bean",
+        "Black-eyed pea"
+      ],
+      "avoid": [
+        "Copper bean",
+        "Green lentil",
+        "Kidney bean",
+        "Navy bean",
+        "Pinto bean",
+        "Red lentil",
+        "Tamerind"
+      ],
+      "neutral": []
+    },
+    "Grain": {
+      "beneficial": [
+        "Amaranth",
+        "Barley",
+        "Buckwheat",
+        "Essene bread",
+        "Ezekiel bread",
+        "Kamut",
+        "Kasha",
+        "Milelt",
+        "Rice",
+        "Rye",
+        "Spelt"
+      ],
+      "avoid": [
+        "Any products such as flour",
+        "Bread and noodles made with these Grains products",
+        "Corn",
+        "Farina",
+        "Gluten",
+        "Graham",
+        "Oat",
+        "Seven-Grains",
+        "Wheat"
+      ],
+      "neutral": []
+    },
+    "Vegetable": {
+      "beneficial": [
+        "Artichoke",
+        "Broccoli",
+        "Chicory",
+        "Collard greens",
+        "Dandelion",
+        "Garlic",
+        "Horseradish",
+        "Kale",
+        "Okra",
+        "Onions",
+        "Parsley",
+        "Parsnips",
+        "Pumpkin",
+        "Red peppers",
+        "Romaine Lettuce",
+        "Seaweed",
+        "Spinach",
+        "Sweet potato",
+        "Turnip"
+      ],
+      "avoid": [
+        "Alfalfa sprout",
+        "avocado",
+        "Brussel sprout",
+        "Cabbage",
+        "Cauliflower",
+        "Eggplant",
+        "Fermented olive",
+        "Leek",
+        "Mustard greens",
+        "Potato",
+        "Rhubarb",
+        "Shiitake mushroom"
+      ],
+      "neutral": []
+    },
+    "Fruit": {
+      "beneficial": [
+        "Fig",
+        "Plum",
+        "Prune"
+      ],
+      "avoid": [
+        "Blackberry",
+        "Cantaloupe",
+        "Coconut",
+        "Honeydew",
+        "Melon",
+        "Orange",
+        "Strawberry",
+        "Tangerine"
+      ],
+      "neutral": []
+    },
+    "Spice/Additive/Condiment": {
+      "beneficial": [
+        "Cayenne pepper",
+        "Chocoalte",
+        "Cocoa",
+        "Curry",
+        "Honey",
+        "iodized salt",
+        "Kelp-based seasonings",
+        "Parsley"
+      ],
+      "avoid": [
+        "Black pepper",
+        "Capers",
+        "Cinnamon",
+        "Corn syrup",
+        "Cornstarch",
+        "Kethcup",
+        "Mayonnaise",
+        "Nutmeg",
+        "Pickle",
+        "Relish",
+        "Vanilla",
+        "Vinegar",
+        "White Pepper"
+      ],
+      "neutral": []
+    },
+    "Beverage": {
+      "beneficial": [
+        "Club soda",
+        "Seltzer water",
+        "Tea",
+        "Wine"
+      ],
+      "avoid": [
+        "Beer",
+        "Black tea",
+        "Coffee",
+        "Distilled liquor"
+      ],
+      "neutral": []
+    }
+  },
+  "foodCount": {
+    "beneficial": 66,
+    "avoid": 74,
+    "neutral": 0
+  }
+}

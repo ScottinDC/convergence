@@ -1,0 +1,164 @@
+<html class="light" lang="en"><head></head><body class="font-body-md text-on-background selection:bg-primary-container selection:text-on-primary-container">```html
+
+
+
+    <meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ComboDiet - Nurtured Clarity Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbcc",
+                        "inverse-surface": "#30312e",
+                        "outline-variant": "#c3c8bf",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#424942",
+                        "secondary-fixed-dim": "#c1c8c0",
+                        "on-surface": "#1b1c19",
+                        "primary": "#47614a",
+                        "tertiary-fixed-dim": "#e8beac",
+                        "primary-container": "#5f7a61",
+                        "surface": "#fbf9f4",
+                        "on-secondary-container": "#5d645d",
+                        "inverse-primary": "#b1ceb1",
+                        "surface-variant": "#e4e2dd",
+                        "inverse-on-surface": "#f2f1ec",
+                        "outline": "#737971",
+                        "on-background": "#1b1c19",
+                        "on-surface-variant": "#434842",
+                        "surface-container-high": "#eae8e3",
+                        "surface-bright": "#fbf9f4",
+                        "on-tertiary-container": "#fffaf8",
+                        "on-primary-container": "#efffec",
+                        "secondary-fixed": "#dde4db",
+                        "surface-container-highest": "#e4e2dd",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#334d36",
+                        "surface-dim": "#dbdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4032",
+                        "secondary-container": "#dbe2d9",
+                        "surface-tint": "#4a654d",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2c160b",
+                        "tertiary-container": "#8e6c5c",
+                        "surface-container-low": "#f5f3ee",
+                        "tertiary": "#745445",
+                        "background": "#fbf9f4",
+                        "surface-container": "#f0eee9",
+                        "on-primary-fixed": "#07200e",
+                        "secondary": "#596059",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#cceacc",
+                        "primary-fixed-dim": "#b1ceb1",
+                        "on-secondary-fixed": "#171d18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "48px",
+                        "gutter": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "title-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f4;
+            color: #1b1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(251, 249, 244, 0.7);
+            backdrop-filter: blur(12px);
+            border: 0.5px solid rgba(115, 121, 113, 0.1);
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px rgba(71, 97, 74, 0.08);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c3c8bf;
+            border-radius: 10px;
+        }
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+<!-- TopAppBar Component -->
+<header class="w-full top-0 sticky z-50 bg-surface shadow-sm transition-opacity duration-150">
+<div class="flex items-center justify-between px-md h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer active:scale-95">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">ComboDiet</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/30 active:scale-95 transition-transform cursor-pointer">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRz8IjTm8ezicVa-RG2duiykf6ilh2uVixhnWZgkVNZuVZDWirf4S9XUOD2muJ6gr1H23o5lPi58Z1QnxGU9Mwl8w6nKv70bAz1FK6YuKysTI1Iz4kb12r-sqkKerFQBGJ5MDY8YmTTdXCANoSlx-KOQDoW1GKyzwW9zA9CPWBzLKlHJgaULpVvWxxkzSqgv1tawFXRTFAHbcwU5Xk2oHltck9hm9UpP8YlWgobawFPqI58gf8kyeVRAhTE4REoM7noIkdPs4G-NA"/>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter py-md pb-32">
+<!-- Welcome Section -->
+<section class="mb-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
+<p class="font-label-md text-secondary tracking-widest mb-xs uppercase">Daily Digest</p>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-primary">Welcome back, <span class="text-primary-container">Dr. Aris</span>.</h2>
+<p class="text-body-md text-on-surface-variant mt-2 max-w-xl">Your digestive harmony is at 92% today. You're maintaining excellent clarity in your meal pairings.</p>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md items-start">
+<!-- Daily Status Card (Left Column) -->
+<div class="md:col-span-7 lg:col-span-8 flex flex-col gap-md">
+<div class="glass-card soft-shadow rounded-xl p-md flex flex-col md:flex-row items-center gap-md border-l-[6px] border-primary">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+</svg></div></div></div></div></main></body></html>
