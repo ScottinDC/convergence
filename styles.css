@@ -47,7 +47,7 @@
   --gutter: 24px;
 
   --shadow-ambient: 0 10px 30px rgba(71, 97, 74, 0.08);
-  --shadow-card: 0 4px 20px rgba(71, 97, 74, 0.04);
+  --shadow-card: 0 2px 8px rgba(27, 28, 25, 0.08);
   --shadow-header: 0 1px 0 rgba(71, 97, 74, 0.06);
 
   --font-display-lg: clamp(2rem, 4.5vw, 3rem);
@@ -188,11 +188,26 @@ button:disabled {
 .panel,
 .condition-item,
 .result-card,
+.overview-tile,
+.diet-option,
+.condition-form,
+.question-item,
+.empty-state,
+.ai-section,
+.food-combining-note,
+.hero-note,
+.note-box,
+.advanced-toggle {
+  box-shadow: var(--shadow-card);
+}
+
+.panel,
+.condition-item,
+.result-card,
 .overview-tile {
   background: var(--surface-container-lowest);
   border: 1px solid rgba(115, 121, 113, 0.1);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
 }
 
 .panel {
@@ -591,7 +606,7 @@ h4 {
 .diet-option:has(input:checked) {
   border-color: var(--primary);
   background: var(--primary-fixed);
-  box-shadow: 0 0 0 1px rgba(71, 97, 74, 0.12);
+  box-shadow: var(--shadow-card), 0 0 0 1px rgba(71, 97, 74, 0.12);
 }
 
 .diet-option:has(input:checked) .diet-option-check {
@@ -931,7 +946,11 @@ textarea {
   .condition-item,
   .result-card,
   .overview-tile,
-  .diet-option {
+  .diet-option,
+  .condition-form,
+  .question-item,
+  .empty-state,
+  .ai-section {
     animation: rise-in 420ms ease both;
   }
 
