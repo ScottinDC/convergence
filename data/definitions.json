@@ -4,7 +4,7 @@
     "name": "DASH Diet",
     "shortName": "DASH",
     "description": "Dietary Approaches to Stop Hypertension emphasizes vegetables, fruits, whole grains, lean protein, and limited sodium.",
-    "framing": "Often discussed for blood pressure and heart health. Use as a conversation framework with the care team, not as a standalone treatment plan."
+    "framing": "Often discussed for blood pressure and heart health. Use as a conversation guide with the care team, not as a standalone treatment plan."
   },
   "mediterranean": {
     "id": "mediterranean",
@@ -39,13 +39,13 @@
     "name": "Semi-Vegetarian / Flexitarian",
     "shortName": "Semi-Vegetarian",
     "description": "Primarily plant-based eating with occasional meat, poultry, or fish—also called flexitarianism.",
-    "framing": "Offers flexibility while keeping plants central. Useful as a discussion framework when full vegetarianism feels too restrictive."
+    "framing": "Offers flexibility while keeping plants central. Useful as a discussion guide when full vegetarianism feels too restrictive."
   },
   "bloodType": {
     "id": "bloodType",
     "name": "Blood Type / GenoType Diet",
     "shortName": "Blood Type",
-    "description": "Framework that classifies foods as most beneficial, neutral, or to avoid based on ABO blood type.",
+    "description": "Diet that classifies foods as most beneficial, neutral, or to avoid based on ABO blood type.",
     "framing": "Evidence is mixed and this is not standard oncology nutrition guidance. Treat classifications as discussion prompts with a registered dietitian."
   }
 }

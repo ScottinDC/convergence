@@ -362,7 +362,7 @@ h4 {
   margin: var(--space-sm) 0 0;
 }
 
-/* Profile / frameworks */
+/* Profile / diets */
 .profile-section {
   margin: 0;
   padding: 0;
@@ -525,8 +525,8 @@ h4 {
   color: var(--primary);
 }
 
-/* Framework selection grid — compact multi-select */
-.framework-select-grid {
+/* Diet selection grid — compact multi-select */
+.diet-select-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-sm);
@@ -534,13 +534,13 @@ h4 {
 }
 
 @media (min-width: 768px) {
-  .framework-select-grid {
+  .diet-select-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-md);
   }
 }
 
-.framework-option {
+.diet-option {
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -554,12 +554,12 @@ h4 {
   transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
 }
 
-.framework-option:hover {
+.diet-option:hover {
   border-color: rgba(71, 97, 74, 0.35);
   background: var(--surface-container-high);
 }
 
-.framework-option input {
+.diet-option input {
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -568,7 +568,7 @@ h4 {
   pointer-events: none;
 }
 
-.framework-option-check {
+.diet-option-check {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -583,49 +583,49 @@ h4 {
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
-.framework-option-check .material-symbols-outlined {
+.diet-option-check .material-symbols-outlined {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.framework-option:has(input:checked) {
+.diet-option:has(input:checked) {
   border-color: var(--primary);
   background: var(--primary-fixed);
   box-shadow: 0 0 0 1px rgba(71, 97, 74, 0.12);
 }
 
-.framework-option:has(input:checked) .framework-option-check {
+.diet-option:has(input:checked) .diet-option-check {
   border-color: var(--primary);
   background: var(--primary);
   color: var(--on-primary);
 }
 
-.framework-option:has(input:focus-visible) {
+.diet-option:has(input:focus-visible) {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
-.framework-option-body {
+.diet-option-body {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
   min-width: 0;
 }
 
-.framework-option-reference {
+.diet-option-reference {
   border-style: dashed;
   border-color: rgba(71, 97, 74, 0.28);
   background: var(--surface-container-lowest);
 }
 
-.framework-name {
+.diet-name {
   font-size: var(--font-label-md);
   font-weight: 700;
   color: var(--primary);
   line-height: 1.3;
 }
 
-.framework-desc {
+.diet-desc {
   font-size: var(--font-caption);
   color: var(--on-surface-variant);
   line-height: 1.45;
@@ -931,7 +931,7 @@ textarea {
   .condition-item,
   .result-card,
   .overview-tile,
-  .framework-option {
+  .diet-option {
     animation: rise-in 420ms ease both;
   }
 

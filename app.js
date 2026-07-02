@@ -121,20 +121,25 @@ function loadProfile() {
   if (!saved) {
     return {
       bloodType: "",
-      frameworks: ["dash", "mediterranean"]
+      diets: ["dash", "mediterranean"]
     };
   }
 
   try {
     const parsed = JSON.parse(saved);
+    const diets = Array.isArray(parsed.diets)
+      ? parsed.diets
+      : Array.isArray(parsed.frameworks)
+        ? parsed.frameworks
+        : ["dash", "mediterranean"];
     return {
       bloodType: parsed.bloodType || "",
-      frameworks: Array.isArray(parsed.frameworks) ? parsed.frameworks : ["dash", "mediterranean"]
+      diets
     };
   } catch {
     return {
       bloodType: "",
-      frameworks: ["dash", "mediterranean"]
+      diets: ["dash", "mediterranean"]
     };
   }
 }
@@ -148,19 +153,19 @@ function applyProfileToForm() {
     input.checked = input.value === profile.bloodType;
   });
 
-  document.querySelectorAll('input[name="framework"]').forEach((input) => {
-    input.checked = profile.frameworks.includes(input.value);
+  document.querySelectorAll('input[name="diet"]').forEach((input) => {
+    input.checked = profile.diets.includes(input.value);
   });
 }
 
-function syncFrameworkSelectionFromForm() {
-  const selected = [...document.querySelectorAll('input[name="framework"]:checked')].map(
+function syncDietSelectionFromForm() {
+  const selected = [...document.querySelectorAll('input[name="diet"]:checked')].map(
     (item) => item.value
   );
 
   profile = {
     ...profile,
-    frameworks: selected
+    diets: selected
   };
   currentAiAnalysis = null;
   persistProfile();
@@ -184,15 +189,15 @@ function bindProfileControls() {
     });
   });
 
-  const frameworkOptions = document.querySelector("#framework-options");
+  const dietOptions = document.querySelector("#diet-options");
 
-  if (frameworkOptions) {
-    frameworkOptions.addEventListener("change", (event) => {
-      if (event.target.name !== "framework") {
+  if (dietOptions) {
+    dietOptions.addEventListener("change", (event) => {
+      if (event.target.name !== "diet") {
         return;
       }
 
-      syncFrameworkSelectionFromForm();
+      syncDietSelectionFromForm();
     });
   }
 }
@@ -275,7 +280,7 @@ function render() {
     renderAiSummary(currentAiAnalysis);
   } else {
     renderAiEmptyState(
-      "Run AI Analysis to turn the entered conditions into a clearer summary for discussion with her care team."
+      "Run AI Analysis to turn the entered conditions into a clearer summary for discussion with your care team."
     );
   }
 }
@@ -437,7 +442,7 @@ async function renderNutritionOptions() {
     buildNutritionBlock(
       "Cautions flagged by selected diets",
       currentNutritionAnalysis.cautions.map(
-        (item) => `${item.name} (${item.frameworks.join(", ")})`
+        (item) => `${item.name} (${item.diets.join(", ")})`
       ),
       "No explicit avoid-list items for your selected diets."
     )
@@ -629,26 +634,26 @@ function buildQuestions() {
   }
 
   if (hasOverlap || hasHelpfulThemes) {
-    questions.push("Which repeated food themes are truly safe and worth continuing for her specific diagnoses?");
+    questions.push("Which repeated food themes are truly safe and worth continuing for your specific diagnoses?");
   }
 
-  if (profile.frameworks.includes("bloodType")) {
+  if (profile.diets.includes("bloodType")) {
     questions.push(
       "Should Blood Type / GenoType food lists be used at all during active treatment, or should we rely on evidence-based oncology nutrition guidance?"
     );
   }
 
-  if (profile.frameworks.length > 1) {
-    const frameworkLabels = [
-      ...document.querySelectorAll('input[name="framework"]:checked')
+  if (profile.diets.length > 1) {
+    const dietLabels = [
+      ...document.querySelectorAll('input[name="diet"]:checked')
     ]
       .map((input) =>
-        input.closest("label")?.querySelector(".framework-name")?.textContent?.trim()
+        input.closest("label")?.querySelector(".diet-name")?.textContent?.trim()
       )
       .filter(Boolean);
 
     questions.push(
-      `When ${frameworkLabels.join(", ")} diets disagree, which priorities should guide meals right now?`
+      `When ${dietLabels.join(", ")} diets disagree, which priorities should guide meals right now?`
     );
   }
 

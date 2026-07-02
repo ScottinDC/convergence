@@ -21,13 +21,13 @@ test.describe("ComboDiet", () => {
     await expect(page.getByRole("heading", { name: "Diet Explorer", level: 1 })).toBeVisible();
   });
 
-  test("framework cards select and deselect", async ({ page }) => {
+  test("diet cards select and deselect", async ({ page }) => {
     await page.goto("/");
 
-    const ketoCard = page.locator('label.framework-option', {
-      has: page.locator('input[name="framework"][value="keto"]')
+    const ketoCard = page.locator('label.diet-option', {
+      has: page.locator('input[name="diet"][value="keto"]')
     });
-    const ketoInput = ketoCard.locator('input[name="framework"][value="keto"]');
+    const ketoInput = ketoCard.locator('input[name="diet"][value="keto"]');
 
     await expect(ketoInput).not.toBeChecked();
     await ketoCard.click();
@@ -92,10 +92,10 @@ test.describe("ComboDiet", () => {
     await expect(page.locator("#condition-count")).toHaveText("1 saved");
   });
 
-  test("nutritional options section renders after frameworks load", async ({ page }) => {
+  test("diet options section renders after diets load", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page.getByRole("heading", { name: "Nutritional options" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Diet options" })).toBeVisible();
 
     const nutritionPanel = page.locator("#nutrition-options");
     await expect(nutritionPanel).not.toContainText(

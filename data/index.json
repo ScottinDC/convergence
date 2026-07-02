@@ -68,7 +68,7 @@
       "type": "blood-type"
     }
   ],
-  "frameworks": [
+  "dietOptions": [
     {
       "id": "dash",
       "label": "DASH",

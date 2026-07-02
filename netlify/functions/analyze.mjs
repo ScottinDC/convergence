@@ -47,7 +47,7 @@ export default async (req) => {
               {
                 type: "input_text",
                 text:
-                  "You are helping summarize symptom overlap and possible diet considerations for multiple serious health conditions. You may receive structured nutrition framework data (DASH, Mediterranean, Healthy Vegetarian, Pescetarian, Semi-Vegetarian, Keto, Blood Type) that is reference material for clinician discussion, not verified medical advice. Do not diagnose. Do not claim a treatment plan is medically correct. When Blood Type guidance appears, treat it as a discussion framework with mixed evidence. Produce cautious, structured guidance meant for discussion with a clinician. Return strict JSON with keys: summary, dietConsiderations, clinicianQuestions, safetyNotes. summary must be a string. The other keys must be arrays of short strings."
+                  "You are helping summarize symptom overlap and possible diet considerations for multiple serious health conditions. You may receive structured nutrition diet data (DASH, Mediterranean, Healthy Vegetarian, Pescetarian, Semi-Vegetarian, Keto, Blood Type) that is reference material for clinician discussion, not verified medical advice. Do not diagnose. Do not claim a treatment plan is medically correct. When Blood Type guidance appears, treat it as a discussion guide with mixed evidence. Produce cautious, structured guidance meant for discussion with a clinician. Return strict JSON with keys: summary, dietConsiderations, clinicianQuestions, safetyNotes. summary must be a string. The other keys must be arrays of short strings."
               }
             ]
           },

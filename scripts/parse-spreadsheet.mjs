@@ -167,7 +167,7 @@ const manifest = {
   source: "Google Sheets export",
   sheets: wb.SheetNames,
   diets: [],
-  frameworks: []
+  dietOptions: []
 };
 
 const definitions = {
@@ -178,7 +178,7 @@ const definitions = {
     description:
       "Dietary Approaches to Stop Hypertension emphasizes vegetables, fruits, whole grains, lean protein, and limited sodium.",
     framing:
-      "Often discussed for blood pressure and heart health. Use as a conversation framework with the care team, not as a standalone treatment plan."
+      "Often discussed for blood pressure and heart health. Use as a conversation guide with the care team, not as a standalone treatment plan."
   },
   mediterranean: {
     id: "mediterranean",
@@ -223,14 +223,14 @@ const definitions = {
     description:
       "Primarily plant-based eating with occasional meat, poultry, or fish—also called flexitarianism.",
     framing:
-      "Offers flexibility while keeping plants central. Useful as a discussion framework when full vegetarianism feels too restrictive."
+      "Offers flexibility while keeping plants central. Useful as a discussion guide when full vegetarianism feels too restrictive."
   },
   bloodType: {
     id: "bloodType",
     name: "Blood Type / GenoType Diet",
     shortName: "Blood Type",
     description:
-      "Framework that classifies foods as most beneficial, neutral, or to avoid based on ABO blood type.",
+      "Diet that classifies foods as most beneficial, neutral, or to avoid based on ABO blood type.",
     framing:
       "Evidence is mixed and this is not standard oncology nutrition guidance. Treat classifications as discussion prompts with a registered dietitian."
   }
@@ -263,7 +263,7 @@ for (const [dietName, meta] of Object.entries(dietBuckets)) {
   });
 }
 
-manifest.frameworks = [
+manifest.dietOptions = [
   { id: "dash", label: "DASH", dataFile: "dash.json", definitionId: "dash", group: "general" },
   {
     id: "mediterranean",
@@ -305,7 +305,7 @@ manifest.frameworks = [
 ];
 
 function buildDownloadHtml(dietFiles) {
-  const frameworkLinks = dietFiles
+  const dietLinks = dietFiles
     .map(
       (diet) =>
         `        <li><a href="${diet.file}" download>${diet.file}</a> <span class="meta">(${diet.name})</span></li>`
@@ -334,16 +334,16 @@ function buildDownloadHtml(dietFiles) {
   <h1>ComboDiet Diet Data</h1>
   <p>Structured JSON exports from the ComboDiet spreadsheet.</p>
 
-  <h2>Per-framework exports</h2>
+  <h2>Per-diet exports</h2>
   <ul>
-${frameworkLinks}
+${dietLinks}
   </ul>
 
   <div class="bundle">
     <h2>Manifest &amp; definitions</h2>
     <ul>
-      <li><a href="index.json" download>index.json</a> <span class="meta">(framework manifest)</span></li>
-      <li><a href="definitions.json" download>definitions.json</a> <span class="meta">(framework descriptions)</span></li>
+      <li><a href="index.json" download>index.json</a> <span class="meta">(diet manifest)</span></li>
+      <li><a href="definitions.json" download>definitions.json</a> <span class="meta">(diet descriptions)</span></li>
       <li><a href="by-cat.json" download>by-cat.json</a> <span class="meta">(by cat tab)</span></li>
       <li><a href="by-name.json" download>by-name.json</a> <span class="meta">(by name tab)</span></li>
       <li><a href="by-name-2.json" download>by-name-2.json</a> <span class="meta">(by name tab 2)</span></li>

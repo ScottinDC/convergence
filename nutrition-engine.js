@@ -57,38 +57,45 @@ const NutritionEngine = (() => {
     return payload;
   }
 
-  function resolveFrameworkFiles(manifest, profile) {
-    const files = [];
+  function getDietOptions(manifest) {
+    return manifest.dietOptions || [];
+  }
 
-    manifest.frameworks.forEach((framework) => {
-      if (!profile.frameworks.includes(framework.id)) {
+  function resolveDietFiles(manifest, profile) {
+    const files = [];
+    const selectedDiets =
+      profile.diets ||
+      (Array.isArray(profile.frameworks) ? profile.frameworks : []);
+
+    getDietOptions(manifest).forEach((dietOption) => {
+      if (!selectedDiets.includes(dietOption.id)) {
         return;
       }
 
-      if (framework.id === "bloodType") {
+      if (dietOption.id === "bloodType") {
         if (!profile.bloodType) {
           return;
         }
 
         files.push({
-          frameworkId: framework.id,
-          label: `${framework.label} (${profile.bloodType})`,
-          data: framework.dataFilePattern.replace("{type}", profile.bloodType.toLowerCase())
+          dietId: dietOption.id,
+          label: `${dietOption.label} (${profile.bloodType})`,
+          data: dietOption.dataFilePattern.replace("{type}", profile.bloodType.toLowerCase())
         });
         return;
       }
 
       files.push({
-        frameworkId: framework.id,
-        label: framework.label,
-        data: framework.dataFile
+        dietId: dietOption.id,
+        label: dietOption.label,
+        data: dietOption.dataFile
       });
     });
 
     return files;
   }
 
-  function flattenCategoryList(diet, frameworkLabel) {
+  function flattenCategoryList(diet, dietLabel) {
     const supportive = [];
 
     Object.entries(diet.categories || {}).forEach(([category, foods]) => {
@@ -101,8 +108,8 @@ const NutritionEngine = (() => {
           name: food,
           normalized: normalizeFoodName(food),
           category,
-          frameworkId: diet.id,
-          frameworkLabel,
+          dietId: diet.id,
+          dietLabel,
           stance: "supportive"
         });
       });
@@ -111,7 +118,7 @@ const NutritionEngine = (() => {
     return { supportive, avoid: [], neutral: [] };
   }
 
-  function flattenBloodType(diet, frameworkLabel) {
+  function flattenBloodType(diet, dietLabel) {
     const supportive = [];
     const avoid = [];
     const neutral = [];
@@ -126,8 +133,8 @@ const NutritionEngine = (() => {
           name: food,
           normalized: normalizeFoodName(food),
           category,
-          frameworkId: diet.id,
-          frameworkLabel,
+          dietId: diet.id,
+          dietLabel,
           stance: "beneficial"
         });
       });
@@ -141,8 +148,8 @@ const NutritionEngine = (() => {
           name: food,
           normalized: normalizeFoodName(food),
           category,
-          frameworkId: diet.id,
-          frameworkLabel,
+          dietId: diet.id,
+          dietLabel,
           stance: "avoid"
         });
       });
@@ -156,8 +163,8 @@ const NutritionEngine = (() => {
           name: food,
           normalized: normalizeFoodName(food),
           category,
-          frameworkId: diet.id,
-          frameworkLabel,
+          dietId: diet.id,
+          dietLabel,
           stance: "neutral"
         });
       });
@@ -166,9 +173,9 @@ const NutritionEngine = (() => {
     return { supportive, avoid, neutral };
   }
 
-  async function loadSelectedFrameworks(profile) {
+  async function loadSelectedDiets(profile) {
     const manifest = await loadManifest();
-    const targets = resolveFrameworkFiles(manifest, profile);
+    const targets = resolveDietFiles(manifest, profile);
     const loaded = [];
 
     for (const target of targets) {
@@ -179,14 +186,14 @@ const NutritionEngine = (() => {
           : flattenCategoryList(diet, target.label);
 
       loaded.push({
-        frameworkId: target.frameworkId,
+        dietId: target.dietId,
         label: target.label,
         diet,
         ...flattened
       });
     }
 
-    return { manifest, frameworks: loaded };
+    return { manifest, diets: loaded };
   }
 
   function foodsMatch(left, right) {
@@ -210,13 +217,13 @@ const NutritionEngine = (() => {
         map.set(key, {
           name: entry.name,
           normalized: key,
-          frameworks: []
+          diets: []
         });
       }
 
-      map.get(key).frameworks.push({
-        frameworkId: entry.frameworkId,
-        frameworkLabel: entry.frameworkLabel,
+      map.get(key).diets.push({
+        dietId: entry.dietId,
+        dietLabel: entry.dietLabel,
         category: entry.category,
         stance: entry.stance
       });
@@ -225,40 +232,40 @@ const NutritionEngine = (() => {
     return map;
   }
 
-  function findAlignedFoods(frameworks) {
-    if (frameworks.length === 0) {
+  function findAlignedFoods(diets) {
+    if (diets.length === 0) {
       return [];
     }
 
-    const supportiveMaps = frameworks.map((framework) =>
-      groupByNormalized([...framework.supportive, ...framework.neutral])
+    const supportiveMaps = diets.map((diet) =>
+      groupByNormalized([...diet.supportive, ...diet.neutral])
     );
 
     const firstMap = supportiveMaps[0];
     const aligned = [];
 
     firstMap.forEach((entry, normalized) => {
-      const appearsEverywhere = supportiveMaps.every((frameworkMap) => frameworkMap.has(normalized));
+      const appearsEverywhere = supportiveMaps.every((dietMap) => dietMap.has(normalized));
       if (!appearsEverywhere) {
         return;
       }
 
       aligned.push({
         name: entry.name,
-        frameworks: entry.frameworks
+        diets: entry.diets
       });
     });
 
     return aligned.sort((a, b) => a.name.localeCompare(b.name)).slice(0, 24);
   }
 
-  function findConflicts(frameworks) {
+  function findConflicts(diets) {
     const supportive = [];
     const avoid = [];
 
-    frameworks.forEach((framework) => {
-      supportive.push(...framework.supportive, ...framework.neutral);
-      avoid.push(...framework.avoid);
+    diets.forEach((diet) => {
+      supportive.push(...diet.supportive, ...diet.neutral);
+      avoid.push(...diet.avoid);
     });
 
     const conflicts = [];
@@ -271,8 +278,8 @@ const NutritionEngine = (() => {
 
         conflicts.push({
           food: supportEntry.name,
-          supportiveIn: supportEntry.frameworkLabel,
-          avoidIn: avoidEntry.frameworkLabel
+          supportiveIn: supportEntry.dietLabel,
+          avoidIn: avoidEntry.dietLabel
         });
       });
     });
@@ -286,36 +293,36 @@ const NutritionEngine = (() => {
     return [...deduped.values()].sort((a, b) => a.food.localeCompare(b.food)).slice(0, 20);
   }
 
-  function findCautions(frameworks) {
+  function findCautions(diets) {
     const cautions = new Map();
 
-    frameworks.forEach((framework) => {
-      framework.avoid.forEach((entry) => {
+    diets.forEach((diet) => {
+      diet.avoid.forEach((entry) => {
         if (!cautions.has(entry.normalized)) {
           cautions.set(entry.normalized, {
             name: entry.name,
-            frameworks: []
+            diets: []
           });
         }
 
-        cautions.get(entry.normalized).frameworks.push(entry.frameworkLabel);
+        cautions.get(entry.normalized).diets.push(entry.dietLabel);
       });
     });
 
     return [...cautions.values()]
       .map((entry) => ({
         name: entry.name,
-        frameworks: [...new Set(entry.frameworks)]
+        diets: [...new Set(entry.diets)]
       }))
       .sort((a, b) => a.name.localeCompare(b.name))
       .slice(0, 20);
   }
 
-  function matchNotesAgainstKnowledgeBase(conditions, frameworks) {
+  function matchNotesAgainstKnowledgeBase(conditions, diets) {
     const allFoods = [];
 
-    frameworks.forEach((framework) => {
-      allFoods.push(...framework.supportive, ...framework.neutral, ...framework.avoid);
+    diets.forEach((diet) => {
+      allFoods.push(...diet.supportive, ...diet.neutral, ...diet.avoid);
     });
 
     const helpfulMatches = [];
@@ -349,9 +356,9 @@ const NutritionEngine = (() => {
   }
 
   async function analyze(profile, conditions) {
-    const { manifest, frameworks } = await loadSelectedFrameworks(profile);
+    const { manifest, diets } = await loadSelectedDiets(profile);
 
-    if (frameworks.length === 0) {
+    if (diets.length === 0) {
       return {
         aligned: [],
         cautions: [],
@@ -363,16 +370,16 @@ const NutritionEngine = (() => {
     }
 
     return {
-      aligned: findAlignedFoods(frameworks),
-      cautions: findCautions(frameworks),
-      conflicts: findConflicts(frameworks),
-      noteMatches: matchNotesAgainstKnowledgeBase(conditions, frameworks),
+      aligned: findAlignedFoods(diets),
+      cautions: findCautions(diets),
+      conflicts: findConflicts(diets),
+      noteMatches: matchNotesAgainstKnowledgeBase(conditions, diets),
       manifest,
-      frameworks: frameworks.map((framework) => ({
-        id: framework.frameworkId,
-        label: framework.label,
-        supportiveCount: framework.supportive.length,
-        avoidCount: framework.avoid.length
+      diets: diets.map((diet) => ({
+        id: diet.dietId,
+        label: diet.label,
+        supportiveCount: diet.supportive.length,
+        avoidCount: diet.avoid.length
       }))
     };
   }
@@ -380,7 +387,7 @@ const NutritionEngine = (() => {
   function buildPromptContext(profile, analysis, conditions) {
     return {
       profile,
-      selectedFrameworks: analysis.frameworks || [],
+      selectedDiets: analysis.diets || [],
       alignedFoods: (analysis.aligned || []).map((item) => item.name),
       cautionFoods: (analysis.cautions || []).map((item) => item.name),
       conflicts: analysis.conflicts || [],

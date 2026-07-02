@@ -16,7 +16,7 @@ Defined as CSS custom properties on `:root` in `styles.css`.
 | --- | --- | --- |
 | `--background` / `--surface` | `#fbf9f4` | Page background (warm cream) |
 | `--surface-container-lowest` | `#ffffff` | Card surfaces |
-| `--surface-container` | `#f0eee9` | Secondary surfaces, framework cards |
+| `--surface-container` | `#f0eee9` | Secondary surfaces, diet cards |
 | `--surface-container-high` | `#eae8e3` | Elevated tints (DASH card) |
 | `--on-surface` | `#1b1c19` | Primary text |
 | `--on-surface-variant` | `#434842` | Secondary/body text |
@@ -47,7 +47,7 @@ Scale (CSS variables):
 
 - Display (`h1`): `clamp(2rem, 4.5vw, 3rem)`, weight 600–700
 - Headline lg (`h2`): `clamp(1.5rem, 3vw, 2rem)`
-- Headline md (`h3`, framework names): `1.5rem`
+- Headline md (`h3`, diet names): `1.5rem`
 - Body lg: `1.125rem` — hero lead
 - Body md: `1rem` — default
 - Label md: `0.875rem`, weight 600 — buttons, form labels
@@ -63,7 +63,7 @@ Single-column page flow (not hero + side-by-side workspace):
 2. Explorer hero — eyebrow + "Diet Explorer" title + caregiver copy + medical disclaimer
 3. Advanced Mode / Combine Rules toggle (UI preview, disabled)
 4. Blood type chips
-5. Framework bento grid (12-column desktop):
+5. Diet bento grid (12-column desktop):
    - Mediterranean featured (8 cols) with gradient visual
    - Keto compact (4 cols)
    - DASH (5 cols) with thumb
@@ -83,7 +83,7 @@ Container max-width: `1200px`, gutter: `24px`. Breakpoint: `980px` — single co
 
 Sticky top bar with ComboDiet brand (explore icon + wordmark) and data exports link.
 
-### Framework cards (`.framework-bento`)
+### Diet cards (`.diet-bento`)
 
 Bento-style selectable cards. Hidden `<input type="checkbox">` inside `<label>`. Selected state via `:has(input:checked)`.
 
@@ -93,7 +93,7 @@ UI preview for "Combine Rules" / Food Combining overlay. Toggle disabled — not
 
 ### Food Combining baseline (`.food-combining-baseline`)
 
-Informational row at bottom of bento — not a framework checkbox.
+Informational row at bottom of bento — not a diet checkbox.
 
 ### Buttons
 
@@ -102,7 +102,7 @@ Minimum height 48px. Pill shape (`--radius-full`). Primary = Ethos sage; seconda
 ## Voice & content
 
 - Product name: **ComboDiet**
-- Caregiver-focused copy (her care team, oncologist, dietitian)
+- User-focused copy (your care team, oncologist, dietitian)
 - Medical disclaimers in Harvest terracotta callouts
 - localStorage keys remain `convergence-health-*` for backward compatibility
 
