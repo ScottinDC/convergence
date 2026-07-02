@@ -358,7 +358,7 @@ const NutritionEngine = (() => {
         conflicts: [],
         noteMatches: { helpfulMatches: [], avoidMatches: [] },
         summary:
-          "Select at least one diet framework (and blood type if using Blood Type) to compare foods."
+          "Select at least one diet (and blood type if using Blood Type) to compare foods."
       };
     }
 

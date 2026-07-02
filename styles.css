@@ -122,12 +122,15 @@ button:disabled {
 }
 
 .brand-lockup {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
 }
 
 .brand-icon {
+  position: absolute;
+  right: 100%;
+  margin-right: var(--space-sm);
   color: var(--primary);
   font-size: 1.5rem;
 }
@@ -734,6 +737,10 @@ textarea {
 
 .saved-section {
   margin-top: var(--space-lg);
+}
+
+.saved-section .inline-heading {
+  margin-bottom: 3px;
 }
 
 .nutrition-card {

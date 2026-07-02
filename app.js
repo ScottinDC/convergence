@@ -402,7 +402,7 @@ function renderDietThemes() {
 
 async function renderNutritionOptions() {
   nutritionOptions.innerHTML =
-    '<p class="status-line">Comparing foods across the selected frameworks...</p>';
+    '<p class="status-line">Comparing foods across the selected diets...</p>';
 
   try {
     currentNutritionAnalysis = await NutritionEngine.analyze(profile, conditions);
@@ -427,19 +427,19 @@ async function renderNutritionOptions() {
 
   stack.appendChild(
     buildNutritionBlock(
-      "Foods aligned across selected frameworks",
+      "Foods aligned across selected diets",
       currentNutritionAnalysis.aligned.map((item) => item.name),
-      "No foods appeared in every selected framework yet. Try fewer frameworks or review cautions below."
+      "No foods appeared in every selected diet yet. Try fewer diets or review cautions below."
     )
   );
 
   stack.appendChild(
     buildNutritionBlock(
-      "Cautions flagged by selected frameworks",
+      "Cautions flagged by selected diets",
       currentNutritionAnalysis.cautions.map(
         (item) => `${item.name} (${item.frameworks.join(", ")})`
       ),
-      "No explicit avoid-list items for the selected frameworks."
+      "No explicit avoid-list items for your selected diets."
     )
   );
 
@@ -451,7 +451,7 @@ async function renderNutritionOptions() {
       buildNutritionBlock(
         "Conflicts to discuss with the care team",
         conflictList,
-        "No direct conflicts detected between the selected frameworks."
+        "No direct conflicts detected between the selected diets."
       )
     );
   }
@@ -486,7 +486,7 @@ async function renderNutritionOptions() {
   const note = document.createElement("div");
   note.className = "note-box";
   note.innerHTML =
-    "<strong>Reminder:</strong> framework lists are reference material for clinician discussion, not individualized medical nutrition therapy.";
+    "<strong>Reminder:</strong> Diet lists are reference material for discussions with your doctor, not individualized medical nutrition therapy.";
   stack.appendChild(note);
 
   nutritionOptions.appendChild(stack);
@@ -648,7 +648,7 @@ function buildQuestions() {
       .filter(Boolean);
 
     questions.push(
-      `When ${frameworkLabels.join(", ")} frameworks disagree, which priorities should guide meals right now?`
+      `When ${frameworkLabels.join(", ")} diets disagree, which priorities should guide meals right now?`
     );
   }
 

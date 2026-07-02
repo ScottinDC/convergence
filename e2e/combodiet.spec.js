@@ -99,11 +99,11 @@ test.describe("ComboDiet", () => {
 
     const nutritionPanel = page.locator("#nutrition-options");
     await expect(nutritionPanel).not.toContainText(
-      "Comparing foods across the selected frameworks",
+      "Comparing foods across the selected diets",
       { timeout: 30_000 }
     );
 
-    await expect(nutritionPanel).toContainText("Foods aligned across selected frameworks");
+    await expect(nutritionPanel).toContainText("Foods aligned across selected diets");
   });
 
   test("health endpoint responds OK", async ({ request }) => {
